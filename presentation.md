@@ -126,7 +126,10 @@ $u^{p - 1}$ の項が出てくる半線形楕円型方程式を変分法で取�
   - 例えば (残余項) $\leq C \epsilon^\alpha - C' \epsilon^\beta$ のような形になる。
   - ゆえに $\alpha > \beta$ ならば、残余項が負になるので、解が存在することが示される。
 
-ここだけ覚える： **Talenti 関数の積分の残余項が、どういう $\epsilon$-order になるのかが、解の存在に直結する。**
+ここだけ覚える：
+
+- mountain pass level や $(\text{PS})_ c$ 条件は、ほぼ確実に **境界での正確な値での勝負になる** 。
+- **Talenti 関数の積分の残余項の $\epsilon$-order** が、解の存在に直結する。
 
 ## Chapter 3: Henon 型方程式
 
@@ -216,57 +219,163 @@ $\alpha > 0$, $\lambda > \lambda_1'$ は定数である．ここで $\lambda_1'$
     - [Brezis-Nirenberg '83] と計算が違う。 *既存の論文の引用では済まされない* 。
   - その「影響」をどこまで抑え込めるかが焦点となる。
 
-## 移動する Talenti 関数 $u_{\epsilon, l}$
+## Chapter 2: 移動する Talenti 関数 $u_{\epsilon, l}$
+
+\[
+  \begin{align}
+    u_{\epsilon, l}(x) &= \frac{\xi_l(x)}{\left( \epsilon + \left\lvert x - x_l \right\rvert^2 \right)^{(N - 2)/2}}, \\
+    v_{\epsilon, l}(x) &= \frac{u_{\epsilon, l}(x)}{\left\| \lvert x \rvert^{\alpha/2^*} u_{\epsilon, l} \right\|_{L^{2^*(\Omega)}}}.
+  \end{align}
+\]
+
+- $\epsilon > 0$, $0 < l < 1$.
+- $x_l = (1 - l, 0, \dots, 0) \in \mathbb{R}^N$.
+- $\{ \xi_l \}_{0 < l < 1} \subset C^\infty_c (\Omega)$ はいくつかの条件を充たすカットオフ関数。
+
+以下では $l = l(\epsilon)$ は $\epsilon > 0$ の関数と見る。 $\epsilon \leq l$ と、 $l \to 0$ as $\epsilon \to 0$ を充たすものとする。
+
+### 評価について
+
+以下、積分の評価を述べる。複雑なので **眺めるだけで良い** 。ポイントを口頭で概説する。
+
+> **Lemma 2.2.1**： $C_1, C_2, C > 0$ が存在し、小さい $\epsilon > 0$ に対し次式が成立する。
+> \[
+>   \begin{multline}
+>     \left\| DU \right\|_{L^2(\mathbb{R}^N)}^2 \epsilon^{-(N-2)/2} - C_1
+>     l^{-(N-2)} \\ \leq
+>     \left\| Du_{\epsilon, l} \right\|_{L^2(\Omega)}^2 \\
+>     \leq
+>     \left\| DU \right\|_{L^2(\mathbb{R}^N)}^2 \epsilon^{-(N-2)/2} + C_2
+>     l^{-(N-2)},
+>   \end{multline}
+> \]
+> \[
+>   \begin{multline}
+>    (1 - 2l)^ {2\alpha/2^ *} \left( \left\| U
+>     \right\|^ {2^ *}_{L^ {2^ *}(\mathbb{R}^N)}\epsilon^{-N/2} - Cl^{-N}
+>     \right)^{2/2^*} \\ \leq
+>     \left\|
+>     \left\lvert x \right\rvert^{\alpha/2^*} u_{\epsilon, l
+>       }\right\|_{L^{2^*}(\Omega)}^2
+>     \leq \left\| U
+>    \right\|^{2}_{L^{2^*}(\mathbb{R}^N)}\epsilon^{-(N-2)/2}.
+>   \end{multline}
+> \]
 
 ## $l(\epsilon) = \epsilon^\gamma$ について
 
 $\sqrt{\epsilon}$ に「追いつかない」ようにしなくてはならないので、 $0 < \gamma < 1/2$ である。
 
+[Long-Yang '12], [Secchi '12] は $\gamma$ を固定している。我々は、 $\Psi$ が $\partial \Omega$ で消える可能性があるので、 $0 < \gamma < 1/2$ を *選ぶ* 必要がある。
+
+> **Corollary 2.2.6**： $0 < \gamma < 1/2$ とし、 $l = l(\epsilon) = \epsilon^\gamma$ とする。このとき、 $\epsilon \to 0$ のとき次式が成立する。
+> \[
+>     \int_\Omega \Psi_0 u_{\epsilon, l}^2 dx
+>     = \begin{cases}
+>       O(\epsilon^{\beta\gamma-(N-4)/2})                    & N \geq 5, \\
+>       O(\epsilon^{\beta\gamma}\lvert \log \epsilon \rvert) & N = 4,    \\
+>       O(\epsilon^{(\beta + 1)\gamma})                      & N = 3.
+>     \end{cases}
+> \]
+
 ### $N \geq 5$ の場合
+
+(残余項) $< 0$ は以下と同値になる。
+
+\[
+  \left( S - S (1 - 2l)^ {2\alpha/2^ *} \right) + \left( C \epsilon^{(N-2)(1/2 - \gamma)} - C' \epsilon^{(\beta \gamma + 1)} \right) < 0. \tag{3}
+\]
+
+2 項目が負になるような $\epsilon > 0$ が存在するための条件は、
+
+\[
+  \gamma < \frac{N-4}{2(\beta + N - 2)}.
+\]
+
+これを充たす $0 < \gamma < 1/2$ は、 $N \geq 5$ のとき存在する。よって 2 項目を負にする $\epsilon > 0$ が得られる。それを固定して $\alpha > 0$ を小さくすれば、 (3) は達成される。よって解が得られる。
 
 ## $l(\epsilon) = \lvert \log \epsilon \rvert^{-k}$ について
 
 感覚的にいうと「 $\gamma$ が $0$ より小さいが、負ではない」場合に相当する。すなわち *この手法は「 $\gamma < 0$ 」の場合にも適用可能である* と考えてよろしい。
 
+> **Corollary 2.2.7**： $k > 0$ とし、 $l = l(\epsilon) = \lvert \log \epsilon \rvert^{-k}$ とする。このとき、 $\epsilon \to 0$ のとき次式が成立する。
+> \[
+>   \int_\Omega \Psi_0 u_{\epsilon, l}^2 dx
+>   = \begin{cases}
+>     O(\lvert \log \epsilon \rvert^{-\beta k} \epsilon^{-(N-4)/2})                    & N \geq 5, \\
+>     O(\lvert \log \epsilon \rvert^{1 -\beta k}) & N = 4,    \\
+>     O(\lvert \log \epsilon \rvert^{-(\beta + 1)k})  & N = 3
+>   \end{cases}
+> \]
+
 ### 標語「$\log$ は定数」
 
 もともと計算機業界で言われている標語(？)。
 
-例：長さ $n$ の文字列の suffix array を構築する。
-
-- 正直にやる方法：$O(n^2 \log n)$。
-- Mamber-Myers 法：$O(n (\log n)^2)$。
-- SA-IS 法：$O(n)$。
-
-普通の計算機でやると、例えば以下のようになる。
-
-||$O(n^2 \log n)$|$O(n (\log n)^2)$|$O(n)$|
-|---|---|---|---|
-|$n \approx 10^6$|数分| **一瞬** | **一瞬** |
-|$n \approx 10^{10}$|論外|(多分数日)|約 20 分|
+> **例** ：長さ $n$ の文字列の suffix array を構築する。
+>
+> - 正直にやる方法：$O(n^2 \log n)$。
+> - Mamber-Myers 法：$O(n (\log n)^2)$。
+> - SA-IS 法：$O(n)$。
+>
+> 普通の計算機でやると、例えば以下のようになる。
+>
+> ||$O(n^2 \log n)$|$O(n (\log n)^2)$|$O(n)$|
+> |---|---|---|---|
+> |$n \approx 10^6$|数分| **一瞬** | **一瞬** |
+> |$n \approx 10^{10}$|論外|(多分数日)|約 20 分|
 
 ### $N = 4$ の場合
 
-## $u_{\epsilon, l}$ の評価手法についてのまとめ
+(残余項) $< 0$ は以下と同値になる。
 
-臨界 Sobolev 指数を持つ方程式を Henon 型に拡張する際に使えるが、既存の臨界 Sobolev 指数を持つ方程式の結果のうち、
+\[
+  \left( S - S (1 - 2l)^ {2\alpha/2^ *} \right) + \left( C \epsilon \lvert \log \epsilon \rvert^ {2k} - C' \epsilon \lvert \log \epsilon \rvert^{1 - \beta k} \right) < 0.
+\]
 
-- 指数の比べ合いになるもの(例： $C\epsilon^\alpha - C'\epsilon^\beta < 0$ の型)は *ほぼそのまま存在定理が出てくる* と見込まれる。
+2 項目が負になるような $\epsilon > 0$ が存在するための条件は、
+
+\[
+  k < \frac{1}{2 + \beta}.
+\]
+
+以下同じ。
+
+## Chapter 2: $u_{\epsilon, l}$ の評価手法についてのまとめ
+
+臨界 Sobolev 指数を持つ方程式を Henon 型に拡張する際に使える。
+
+既存の臨界 Sobolev 指数を持つ方程式の結果のうち、
+
+- 指数の比べ合いになるもの(例： $C\epsilon^\alpha - C'\epsilon^\beta < 0$ の型)は **ほぼそのまま存在定理が出てくる** と見込まれる。
   - たとえ $\lvert \log \epsilon \rvert$ の差しかなくても、勝てる。
     - Brezis-Nirenberg の $N = 4$ で今回勝った。
-- 一方で、指数が一致していて係数の比べ合いになる場合(例： $(A - A') \epsilon^\alpha < 0$ の型)は、 *必ず負ける* 。
+  - 将来、 *これ以上強い結果を得る必要がない* 。
+- 一方で、指数が一致していて係数の比べ合いになる場合(例： $(A - A') \epsilon^\alpha < 0$ の型)は、 **必ず負ける** 。
   - Brezis-Nirenberg の $N = 3$ がその例。今回は存在定理が出てこなかった。
     - しかし少し工夫した方程式になると、すぐにこの場合は存在定理が出なくなる傾向にある。だから *適用範囲に改めて大きな制約を与えた訳ではない* 。
 
 ## $\Psi$ が境界で消える非自明な例
 
+$\beta_0 > 0$, $\Omega = B(0, 1)$, $\Psi(x) = (1 - \lvert x \rvert)^{\beta_0}$ が、 (T1) を充たす。この例では $\Psi$ が境界で消える。
 
+> - **(T1)**: $m > 0$, $\beta \geq 0$ 及び開球 $B \subset \Omega$ が存在し，$x_0 \in \partial \Omega$ 及び $\Psi \geq \Psi_0 \text{ in } \Omega$ が成立する．ここで， $\Psi_0$ は以下で定める．
+> \[
+>   \Psi_0(x) =
+>   \begin{cases}
+>     m \left\lvert x - x_0 \right\rvert^\beta
+>     & x \in B, \\
+>     0 & x \not\in B.
+>   \end{cases}
+> \]
 
-## Kirchhoff 型方程式
+証明は、 2 次元平面に射影し、初等幾何を用いる。 $B$ の直径を $1$ 未満とし、 $\beta = 2 \beta_0$ とし、 $m > 0$ を小さくする。
+
+## Chapter 4: Kirchhoff 型方程式
 
 Kirchhoff-Henon 型方程式と呼ぶことにした。
 
-### 主定理 2
+### 主定理
 
 ## Kirchhoff 型方程式の先行研究
 
@@ -286,7 +395,7 @@ $N = 3$
 
 ## 問題点
 
-$N = 3$, $4 < q < 6$ の場合に、私が手法したい手法がある。しかし、
+$N = 3$, $4 < q < 6$ の場合に、私が適用したい手法がある。しかし、
 
 ## non-local term を拡張
 
@@ -341,15 +450,3 @@ $N = 3$, $4 < q < 6$ の場合に、私が手法したい手法がある。し�
   - Linking を適用、 Nehari manifold の詳しい解析、 Struwe の方法など。
     - 例えば Kirchhoff 型は複数の既存の結果があるので、それらを「 Henon 化」するのもうまくいくだろう。
   - 人によって得意な手法が異なる。私 1 人では全部はできないだろう。手法が広がっていってほしい。
-
-## 博士課程の数学研究のまとめ
-
-- 楕円型方程式はとても難しい。研究課題を見つけて、新規性の高い結果を出すのは難しい。
-  - どの分野もそうだが、中国の勢いはすごい。
-  - 東大数理で楕円型方程式を研究している学生は、最近では私しかいないらしい。
-- 私が出した全ての結果は、大学 3 年生以下の数学で理解可能な工夫がポイントになっている。
-  - 手法が初等的でも、新規の結果が出れば良いと考える。
-  - その意味では、大学院生でも、教員の入れ知恵がなくても結果は出せる。
-  - 中学生の頃から大学院まで、数学やっていたのが結実した。
-
-私にとって、数学は「人生をかけてやるもの」ではない。人生なら、やり直しができるから。私にとって数学は **寿命を削ってやるもの** だった。
