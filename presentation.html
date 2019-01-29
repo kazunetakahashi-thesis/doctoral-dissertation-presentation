@@ -1,0 +1,671 @@
+<!DOCTYPE html><html><head>
+      <title>presentation</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({"extensions":["tex2jax.js"],"jax":["input/TeX","output/HTML-CSS"],"messageStyle":"none","tex2jax":{"processEnvironments":false,"processEscapes":true,"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"TeX":{"extensions":["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]},"HTML-CSS":{"availableFonts":["TeX"]}});
+        </script>
+        <script type="text/javascript" async src="file:////Users/alice/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.3.11/node_modules/@shd101wyy/mume/dependencies/mathjax/MathJax.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="%E5%8D%9A%E5%A3%AB%E8%AB%96%E6%96%87%E5%AF%A9%E6%9F%BB%E4%BC%9A">&#x535A;&#x58EB;&#x8AD6;&#x6587;&#x5BE9;&#x67FB;&#x4F1A;</h1>
+
+<p>&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#xFF1A;</p>
+<p>&#x9AD8;&#x6A4B; &#x548C;&#x97F3; (Kazune Takahashi)</p>
+<h2 class="mume-header" id="%E5%89%8D%E6%8F%90">&#x524D;&#x63D0;</h2>
+
+<ul>
+<li>&#x3053;&#x306E;&#x5BE9;&#x67FB;&#x4F1A;&#x306F;&#x3001;&#x5168;&#x3066;&#x65E5;&#x672C;&#x8A9E;&#x3067;&#x884C;&#x3046;&#x3002;</li>
+<li>&#x516C;&#x958B;&#x306E;&#x5BE9;&#x67FB;&#x4F1A;&#x3067;&#x3042;&#x308B;&#x305F;&#x3081;&#x3001;&#x30CE;&#x30FC;&#x30C8;&#x8A18;&#x9332;&#x3001;&#x5199;&#x771F;&#x64AE;&#x5F71;&#x3001;&#x9332;&#x97F3;&#x3001;&#x52D5;&#x753B;&#x64AE;&#x5F71;&#x3001;&#x52D5;&#x753B;&#x914D;&#x4FE1;&#x7B49;&#x306E;&#x8A18;&#x9332;&#x884C;&#x70BA;&#x306F; <strong>&#x4E00;&#x5207;&#x5236;&#x9650;&#x3057;&#x306A;&#x3044;</strong> &#x3002;
+<ul>
+<li>&#x305F;&#x3060;&#x3057;&#x79C1;&#x306E;&#x9854;&#x5199;&#x771F;&#x304C;&#x516C;&#x958B;&#x306E;&#x5834;&#x306B;&#x51FA;&#x308B;&#x306E;&#x306F;&#x3084;&#x3081;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</li>
+<li>&#x4ED6;&#x306E;&#x65B9;&#x306E;&#x6A29;&#x5229;&#x3082;&#x4FB5;&#x5BB3;&#x3057;&#x306A;&#x3044;&#x3067;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</li>
+</ul>
+</li>
+<li>&#x3053;&#x306E;&#x6587;&#x66F8;&#x306F;&#x3001;&#x5BE9;&#x67FB;&#x4F1A;&#x7D42;&#x4E86;&#x5F8C;&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30CD;&#x30C3;&#x30C8;&#x4E0A;&#x3067;&#x516C;&#x958B;&#x3059;&#x308B;&#x3002;
+<ul>
+<li>&#x5168;&#x3066;&#x306E;&#x30B3;&#x30F3;&#x30C6;&#x30F3;&#x30C4;&#x306F;&#x767D;&#x9ED2;&#x3002;&#x5F37;&#x8ABF;&#x306F; <strong>&#x592A;&#x5B57;</strong> &#x3068; <em>&#x659C;&#x4F53;</em> &#x306E;&#x307F;&#x3092;&#x4F7F;&#x3046;&#x3002;</li>
+<li>&#x53C2;&#x8003;&#x6587;&#x732E;&#x306E;&#x6B63;&#x5F0F;&#x540D;&#x79F0;&#x306F;&#x63B2;&#x3052;&#x306A;&#x3044;&#x304C;&#x3001;&#x5C11;&#x306A;&#x304F;&#x3068;&#x3082;&#x535A;&#x58EB;&#x8AD6;&#x6587;&#x306E; Reference &#x306B;&#x306F;&#x5F15;&#x3044;&#x3066;&#x3042;&#x308B;&#x3002; Reference &#x306F;&#x3053;&#x306E;&#x8CC7;&#x6599;&#x3068;&#x540C;&#x6642;&#x306B;&#x516C;&#x958B;&#x3059;&#x308B;&#x3002;</li>
+</ul>
+</li>
+<li>&#x535A;&#x58EB;&#x8AD6;&#x6587;&#x3092;&#x304A;&#x8AAD;&#x307F;&#x304F;&#x3060;&#x3055;&#x3063;&#x305F;&#x65B9;&#x306B;&#x5411;&#x3051;&#x3066;&#x767A;&#x8868;&#x3092;&#x884C;&#x3046;&#x3002;
+<ul>
+<li>&#x7A2E;&#x3005;&#x306E;&#x4E8B;&#x60C5;&#x3067;&#x8AD6;&#x6587;&#x306B; <em>&#x66F8;&#x3051;&#x306A;&#x304B;&#x3063;&#x305F;&#x5185;&#x5BB9;</em> &#x3092;&#x4E3B;&#x306B;&#x8FF0;&#x3079;&#x3001;&#x88DC;&#x8DB3;&#x8AAC;&#x660E;&#x3001;&#x610F;&#x56F3;&#x306E;&#x8AAC;&#x660E;&#x3092;&#x3059;&#x308B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x304A;&#x65AD;&#x308A;&#xFF1A;&#x300C;&#x6307;&#x5C0E;&#x6559;&#x54E1;&#x3001;&#x305D;&#x306E;&#x4ED6;&#x306E;&#x4EBA;&#x304B;&#x3089;&#x306E;&#x6709;&#x52B9;&#x306A;&#x793A;&#x5506;&#x53C8;&#x306F;&#x3001;&#x52A9;&#x8A00;&#x3092;&#x53D7;&#x3051;&#x3066;&#x3044;&#x308C;&#x3070;&#x3001;&#x305D;&#x306E;&#x4E3B;&#x305F;&#x308B;&#x3082;&#x306E;&#x306B;&#x3064;&#x3044;&#x3066;&#x300D;&#x767A;&#x8868;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x6C42;&#x3081;&#x3089;&#x308C;&#x3066;&#x3044;&#x308B;&#x304C;&#x3001;&#x4E00;&#x5207;&#x306A;&#x3044;&#x3002;&#x6307;&#x5C0E;&#x6559;&#x54E1;&#x306E;&#x5BAE;&#x672C;&#x5148;&#x751F;&#x306B;&#x306F;&#x8AD6;&#x6587;&#x3092;&#x6295;&#x7A3F;&#x3059;&#x308B;&#x969B;&#x306B;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3044;&#x305F;&#x3060;&#x3044;&#x305F;&#x3002;&#x3086;&#x3048;&#x306B;&#x3001;&#x5185;&#x5BB9;&#x306E;&#x5168;&#x8CAC;&#x4EFB;&#x306F;&#x79C1;&#x306B;&#x3042;&#x308B;&#x3002;&#x5168;&#x3066;&#x306E;&#x8CEA;&#x554F;&#x306F;&#x79C1;&#x306B;&#x805E;&#x304F;&#x3088;&#x3046;&#x306B;&#x304A;&#x9858;&#x3044;&#x3057;&#x305F;&#x3044;&#x3002;</p>
+<h2 class="mume-header" id="%E4%BA%88%E5%82%99%E7%9F%A5%E8%AD%98">&#x4E88;&#x5099;&#x77E5;&#x8B58;</h2>
+
+<p>&#x6642;&#x9593;&#x304C;&#x9650;&#x3089;&#x308C;&#x3066;&#x3044;&#x308B;&#x4E0A;&#x306B;&#x3001; <strong>&#x535A;&#x58EB;&#x8AD6;&#x6587;&#x3092;&#x304A;&#x8AAD;&#x307F;&#x304F;&#x3060;&#x3055;&#x3063;&#x305F;&#x5BE9;&#x67FB;&#x306E;&#x5148;&#x751F;&#x65B9;&#x306B;&#x5411;&#x3051;&#x3066;&#x767A;&#x8868;&#x3059;&#x308B;</strong> &#x306E;&#x3067;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x4E88;&#x5099;&#x77E5;&#x8B58;&#x306F;&#x4EEE;&#x5B9A;&#x3059;&#x308B;&#x3002;</p>
+<ul>
+<li>[Brezis-Nirenberg &apos;83] &#x306E;&#x7D50;&#x679C;&#x3092; <em>&#x81EA;&#x5206;&#x3067;&#x8A08;&#x7B97;&#x3057;&#x305F;&#x3053;&#x3068;&#x304C;&#x3042;&#x308B;</em> &#x7A0B;&#x5EA6;&#x306E;&#x77E5;&#x8B58;&#x3092;&#x4EEE;&#x5B9A;&#x3059;&#x308B;&#x3002;
+<ul>
+<li>Mountain pass theorem without <span class="mathjax-exps">$(\text{PS})$</span> condition</li>
+<li><span class="mathjax-exps">$(\text{PS})_c$</span> &#x6761;&#x4EF6;</li>
+<li>Brezis-Nirenberg &#x306B;&#x51FA;&#x3066;&#x304F;&#x308B; Talenti &#x95A2;&#x6570;&#x306E;&#x7A4D;&#x5206;&#x306E;&#x5177;&#x4F53;&#x7684;&#x306A;&#x8A08;&#x7B97;&#x5185;&#x5BB9;</li>
+</ul>
+</li>
+</ul>
+<p>&#x5BE9;&#x67FB;&#x306E;&#x5148;&#x751F;&#x3067;&#x306A;&#x3044;&#x65B9;&#x3078;&#xFF1A; &#x79C1;&#x304C; <strong>&#x300C;&#x3053;&#x3053;&#x306F;&#x899A;&#x3048;&#x308B;&#x300D;</strong> &#x3068;&#x66F8;&#x3044;&#x3066;&#x3044;&#x308B;&#x3068;&#x3053;&#x308D;&#x3060;&#x3051;&#x899A;&#x3048;&#x3066;&#x9032;&#x3093;&#x3067;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<h2 class="mume-header" id="%E8%A8%98%E5%8F%B7">&#x8A18;&#x53F7;</h2>
+
+<p>&#x7279;&#x306B;&#x3001;&#x6D41;&#x5100;&#x304C;&#x7570;&#x306A;&#x308A;&#x3046;&#x308B;&#x8A18;&#x53F7;&#x306B;&#x3064;&#x3044;&#x3066;&#x898F;&#x7D04;&#x3059;&#x308B;&#x3002;</p>
+<p>&#x9818;&#x57DF;&#x306E;&#x6B21;&#x5143;&#x306F; <span class="mathjax-exps">$N \geq 3$</span> &#x3068;&#x3059;&#x308B;&#x3002;&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x306F; <span class="mathjax-exps">$2^* = 2N/(N-2)$</span> &#x3067;&#x8868;&#x3059;&#x3002;</p>
+<p>Talenti &#x95A2;&#x6570; <span class="mathjax-exps">$U \colon \mathbb{R}^N \to \mathbb{R}$</span> &#x3092;<br>
+</p><div class="mathjax-exps">\[U(x) = \frac{1}{\left( 1 + \lvert x \rvert^2 \right)^{(N - 2)/2}}\]</div><br>
+&#x3068;&#x5B9A;&#x3081;&#x308B;&#x3002; <span class="mathjax-exps">$\epsilon &gt; 0$</span> &#x306E;&#x4ED8;&#x304D;&#x65B9;&#x306F;<br>
+<div class="mathjax-exps">\[u_\epsilon = \frac{\xi(x)}{\left( \epsilon + \lvert x \rvert^2 \right)^{(N - 2)/2}}\]</div><br>
+&#x306E;&#x6D41;&#x5100;&#x3092;&#x63A1;&#x7528;&#x3059;&#x308B;&#x3002; Sobolev &#x5B9A;&#x6570;&#x306F;<br>
+<div class="mathjax-exps">\[S = \inf_{u \in H_0^1(\Omega), u \not\equiv 0} \frac{ \left\| Du   \right\|_{L^2(\Omega)}^2}{\left\| u \right\|_{L^{2^*}(\Omega)}^2}\]</div><br>
+&#x3067;&#x8868;&#x3059;&#x3002; [Talenti &apos;76] &#x306B;&#x3088;&#x308A;&#x3001;<br>
+<div class="mathjax-exps">\[S = \frac{ \left\| DU   \right\|_{L^2(\mathbb{R}^N)}^2}{\left\| U \right\|_{L^{2^*}(\mathbb{R}^N)}^2}\]</div><br>
+&#x304C;&#x6210;&#x7ACB;&#x3059;&#x308B;&#x3002;&#x3059;&#x306A;&#x308F;&#x3061; Talenti &#x95A2;&#x6570;&#x306B;&#x3088;&#x3063;&#x3066;&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x306F;&#x9054;&#x6210;&#x3055;&#x308C;&#x308B;&#x3002;<p></p>
+<p><span class="mathjax-exps">$H_0^1(\Omega)$</span> &#x4E0A;&#x306E;&#x70B9;&#x5217; <span class="mathjax-exps">$\{ u_j \}$</span> &#x304C; <span class="mathjax-exps">$I$</span> &#x306E; <span class="mathjax-exps">$(\text{PS})_c$</span> &#x5217;&#x3067;&#x3042;&#x308B;&#x3068;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x6761;&#x4EF6;&#x3092;&#x5145;&#x305F;&#x3059;&#x3053;&#x3068;&#x3092;&#x3044;&#x3046;&#x3002;</p>
+<ol>
+<li><span class="mathjax-exps">$I(u_j) \to c$</span> as <span class="mathjax-exps">$j \to \infty$</span>,</li>
+<li><span class="mathjax-exps">$I^\prime(u_j) \to 0$</span> in <span class="mathjax-exps">$H^{-1}(\Omega)$</span> as <span class="mathjax-exps">$j \to \infty$</span>.</li>
+</ol>
+<h2 class="mume-header" id="o-%E8%A8%98%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6"><span class="mathjax-exps">$O$</span> &#x8A18;&#x6CD5;&#x306B;&#x3064;&#x3044;&#x3066;</h2>
+
+<h3 class="mume-header" id="%E6%9C%AC%E6%9D%A5%E3%81%AE-o-%E8%A8%98%E6%B3%95">&#x672C;&#x6765;&#x306E; <span class="mathjax-exps">$O$</span> &#x8A18;&#x6CD5;</h3>
+
+<p>&#x300C;&#x4E0A;&#x754C;&#x300D;&#x3092;&#x8868;&#x3059;&#x8A18;&#x6CD5;&#x3067;&#x3042;&#x308B;&#x3002;</p>
+<ul>
+<li>&#x4F8B;&#x3048;&#x3070; <span class="mathjax-exps">$n$</span> &#x500B;&#x306E;&#x914D;&#x5217;&#x3092; merge sort &#x3059;&#x308B;&#x969B;&#x306E;&#x6642;&#x9593;&#x8A08;&#x7B97;&#x91CF;&#x306F; <span class="mathjax-exps">$O(n \log n)$</span> &#x3067;&#x3042;&#x308B;&#x304C;&#x3001;&#x5225;&#x306B;&#x3053;&#x308C;&#x3092; <span class="mathjax-exps">$O(n^2)$</span> &#x3068;&#x8A00;&#x3063;&#x3066;&#x3082; <span class="mathjax-exps">$O(2^n)$</span> &#x3068;&#x8A00;&#x3063;&#x3066;&#x3082;&#x3001;&#x672C;&#x6765;&#x306F;&#x9593;&#x9055;&#x3044;&#x3067;&#x306F;&#x306A;&#x3044;&#x3002;&#x4E0A;&#x754C;&#x3092;&#x8868;&#x3059;&#x8A18;&#x53F7;&#x3067;&#x3042;&#x308B;&#x304B;&#x3089;&#x3002;
+<ul>
+<li>&#x4E0B;&#x754C;&#x306F; <span class="mathjax-exps">$\Omega$</span> &#x3092;&#x4F7F;&#x3046;&#x3002;&#x305D;&#x308C;&#x3089;&#x304C;&#x4E00;&#x81F4;&#x3059;&#x308B;&#x5834;&#x5408;&#x306F; <span class="mathjax-exps">$\Theta$</span> &#x3092;&#x7528;&#x3044;&#x308B;&#x306E;&#x304C;&#x4E00;&#x822C;&#x7684;&#x3067;&#x3042;&#x308B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E3%81%93%E3%81%AE%E5%88%86%E9%87%8E%E3%81%A7%E3%81%AE-o-%E8%A8%98%E6%B3%95">&#x3053;&#x306E;&#x5206;&#x91CE;&#x3067;&#x306E; <span class="mathjax-exps">$O$</span> &#x8A18;&#x6CD5;</h3>
+
+<p><span class="mathjax-exps">$f(\epsilon) = O(g(\epsilon))$</span> as <span class="mathjax-exps">$\epsilon \to 0$</span> &#x3067;&#x3042;&#x308B;&#x3068;&#x306F;&#x3001; <span class="mathjax-exps">$C, C&apos; &gt; 0$</span> &#x304C;&#x5B58;&#x5728;&#x3057;&#x3066;&#x3001;&#x5C0F;&#x3055;&#x306A; <span class="mathjax-exps">$\epsilon &gt; 0$</span> &#x306B;&#x5BFE;&#x3057;&#x3001;<br>
+</p><div class="mathjax-exps">\[C g(\epsilon) \leq f(\epsilon) \leq C&apos; g(\epsilon)\]</div><br>
+&#x304C;&#x6210;&#x7ACB;&#x3057;&#x3001; <span class="mathjax-exps">$f, g$</span> &#x306F;&#x540C;&#x3058;&#x6975;&#x9650;(&#x5927;&#x62B5; <span class="mathjax-exps">$0$</span> &#x304B;<span class="mathjax-exps">$\infty$</span> )&#x306B;&#x9054;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x3044;&#x3046;&#x3002;<p></p>
+<p>&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x898F;&#x7D04;&#x3057;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x304C;&#x3001;&#x7279;&#x306B;&#x5F8C;&#x534A;&#x306B;&#x91CD;&#x8981;&#x306B;&#x306A;&#x308B;&#x3002;</p>
+<h2 class="mume-header" id="%E9%A0%98%E5%9F%9F">&#x9818;&#x57DF;</h2>
+
+<p>&#x9818;&#x57DF; <span class="mathjax-exps">$\Omega \subset \mathbb{R}^N$</span> &#x306F;&#x5171;&#x901A;&#x3067;&#x3042;&#x308B;&#x3002; Henon &#x578B;&#x3092;&#x8003;&#x5BDF;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x6761;&#x4EF6;&#x3092;&#x7F6E;&#x304F;&#x3002;</p>
+<ul>
+<li>&#x5883;&#x754C;&#x306F;&#x533A;&#x5206;&#x7684; <span class="mathjax-exps">$C^1$</span> &#x7D1A;&#x3002;</li>
+<li>&#x6709;&#x754C;&#x9818;&#x57DF;&#x3002;&#x7279;&#x306B;&#x5358;&#x4F4D;&#x7403;&#x306B;&#x90E8;&#x5206;&#x96C6;&#x5408;&#x3068;&#x3057;&#x3066;&#x542B;&#x307E;&#x308C;&#x308B;&#xFF1A; <span class="mathjax-exps">$\Omega \subset B(0, 1)$</span>.
+<ul>
+<li><span class="mathjax-exps">$B(x, r) = \{ y \in \mathbb{R}^N \mid \lvert y - x \rvert &lt; r \}$</span> &#x306F;&#x958B;&#x7403;&#x3067;&#x3042;&#x308B;&#x3002;</li>
+</ul>
+</li>
+<li><span class="mathjax-exps">$x_0 = (1, 0, \dots, 0) \in \partial \Omega$</span> &#x3067;&#x5185;&#x90E8;&#x7403;&#x6761;&#x4EF6;&#x3092;&#x5145;&#x305F;&#x3059;&#x3002;</li>
+</ul>
+<h2 class="mume-header" id="%E5%8D%9A%E5%A3%AB%E8%AB%96%E6%96%87%E3%81%AE%E6%A7%8B%E6%88%90">&#x535A;&#x58EB;&#x8AD6;&#x6587;&#x306E;&#x69CB;&#x6210;</h2>
+
+<p>2 &#x3064;&#x306E;&#x65B9;&#x7A0B;&#x5F0F;&#x3092;&#x8003;&#x5BDF;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;</p>
+<ul>
+<li>Chapter 3 &#x3067;&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x3092;&#x6301;&#x3064; Henon &#x65B9;&#x7A0B;&#x5F0F;&#x306E;&#x89E3;&#x306E;&#x5B58;&#x5728;&#x3092;&#x793A;&#x3057;&#x305F;(Theorem 1.1.1)&#x3002;
+<ul>
+<li>Chapter 2 &#x3067;&#x79FB;&#x52D5;&#x3059;&#x308B; Talenti &#x95A2;&#x6570;&#x306E;&#x7A4D;&#x5206;&#x306E;&#x8A55;&#x4FA1;&#x3092;&#x6B63;&#x78BA;&#x306B;&#x884C;&#x3063;&#x305F;&#x3002; <span class="mathjax-exps">$N \geq 3$</span> &#x3067; <span class="mathjax-exps">$\epsilon$</span>-order &#x3092;&#x6C7A;&#x5B9A; or &#x6B8B;&#x4F59;&#x9805;&#x3092;&#x8A55;&#x4FA1;&#x3057;&#x305F;&#x3002;</li>
+<li><span class="mathjax-exps">$\partial \Omega$</span> &#x3067;&#x9805;&#x304C;&#x6D88;&#x3048;&#x308B;&#x975E;&#x81EA;&#x660E;&#x306A;&#x4F8B;&#x3082;&#x542B;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;(Corollary 1.1.3)&#x3002;</li>
+</ul>
+</li>
+<li>Chapter 4 &#x3067; Kirchhoff &#x578B;&#x306B;&#x3001;&#x305D;&#x306E;&#x624B;&#x6CD5;&#x3092;&#x9069;&#x7528;&#x3057;&#x305F;(Theorem 1.1.2)&#x3002;
+<ul>
+<li>Chapter 2 &#x306E;&#x624B;&#x6CD5;&#x306E;&#x6C4E;&#x7528;&#x6027;&#x306E;&#x9AD8;&#x3055;&#x306E;&#x8A3C;&#x62E0;&#x3068;&#x306A;&#x3063;&#x305F;&#x3002;</li>
+<li>&#x5FDC;&#x7528;&#x3059;&#x308B;&#x969B;&#x306B; non-local term &#x3092;&#x62E1;&#x5F35;&#x3057;&#x3066;&#x304B;&#x3089;&#x9069;&#x7528;&#x3057;&#x305F;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="%E5%BE%A9%E7%BF%92%E8%87%A8%E7%95%8C-sobolev-%E6%8C%87%E6%95%B0%E3%81%AF%E3%81%AA%E3%81%9C%E8%88%88%E5%91%B3%E6%B7%B1%E3%81%84%E3%81%8B">&#x5FA9;&#x7FD2;&#xFF1A;&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x306F;&#x306A;&#x305C;&#x8208;&#x5473;&#x6DF1;&#x3044;&#x304B;</h2>
+
+<h3 class="mume-header" id="sobolev-%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF">Sobolev &#x57CB;&#x3081;&#x8FBC;&#x307F;</h3>
+
+<p><span class="mathjax-exps">$u^{p - 1}$</span> &#x306E;&#x9805;&#x304C;&#x51FA;&#x3066;&#x304F;&#x308B;&#x534A;&#x7DDA;&#x5F62;&#x6955;&#x5186;&#x578B;&#x65B9;&#x7A0B;&#x5F0F;&#x3092;&#x5909;&#x5206;&#x6CD5;&#x3067;&#x53D6;&#x308A;&#x6271;&#x3046;&#x3002;</p>
+<ul>
+<li><span class="mathjax-exps">$2 \leq p &lt; 2^*$</span> &#x306E;&#x5834;&#x5408;&#xFF1A; <span class="mathjax-exps">$H_0^1(\Omega) \subset \subset L^p(\Omega)$</span> &#x306F;&#x30B3;&#x30F3;&#x30D1;&#x30AF;&#x30C8;&#x306B;&#x57CB;&#x3081;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x3002;
+<ul>
+<li>&#x89E3;&#x6790;&#x304C;&#x6BD4;&#x8F03;&#x7684;&#x5BB9;&#x6613;&#x3002;</li>
+</ul>
+</li>
+<li><span class="mathjax-exps">$p = 2^*$</span> &#x306E;&#x5834;&#x5408;&#xFF1A; <span class="mathjax-exps">$H_0^1(\Omega) \subset L^ {2^ *}(\Omega)$</span> &#x306F;&#x30B3;&#x30F3;&#x30D1;&#x30AF;&#x30C8;&#x306B;&#x57CB;&#x3081;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x3002;
+<ul>
+<li>&#x5909;&#x5206;&#x6CD5;&#x3067;&#x89E3;&#x6790;&#x306F;&#x3067;&#x304D;&#x308B;&#x304C;&#x3001;&#x96E3;&#x3057;&#x3044;&#x3002;</li>
+<li>&#x89E3;&#x6790;&#x306F;&#x6C4E;&#x95A2;&#x6570;&#x306E;&#x8A55;&#x4FA1;&#x3068; <span class="mathjax-exps">$(\text{PS})_c$</span> &#x6761;&#x4EF6;&#x306B;&#x6301;&#x3061;&#x8FBC;&#x307E;&#x308C;&#x308B;&#x3002;</li>
+<li>&#x30B3;&#x30F3;&#x30D1;&#x30AF;&#x30C8;&#x6027;&#x3092;&#x7834;&#x308B;&#x306E;&#x304C; Talenti &#x95A2;&#x6570;&#x3092;&#x7D5E;&#x308B;&#x5217;&#x3002;</li>
+</ul>
+</li>
+<li><span class="mathjax-exps">$p &gt; 2^*$</span> &#x306E;&#x5834;&#x5408;&#xFF1A; <span class="mathjax-exps">$H_0^1(\Omega) \not\subset L^p(\Omega)$</span> &#x306F;&#x305D;&#x3082;&#x305D;&#x3082;&#x57CB;&#x3081;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x3002;
+<ul>
+<li>&#x5909;&#x5206;&#x6CD5;&#x3067;&#x306F;&#x89E3;&#x6790;&#x306F;&#x56F0;&#x96E3;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E8%87%A8%E7%95%8C-sobolev-%E6%8C%87%E6%95%B0%E3%81%AE%E8%A7%A3%E6%9E%90%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%E3%81%8B">&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x306E;&#x89E3;&#x6790;&#x306F;&#x3069;&#x3046;&#x306A;&#x308B;&#x304B;</h3>
+
+<p>&#x3069;&#x306E;&#x624B;&#x6CD5;&#x3082;&#x3001;&#x5927;&#x4F53;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x624B;&#x9806;&#x306B;&#x306A;&#x308B;([Brezis-Nirenberg &apos;83] &#x578B;&#x306E;&#x624B;&#x6CD5;)&#x3002;</p>
+<ul>
+<li>&#x65B9;&#x7A0B;&#x5F0F;&#x306E;&#x89E3;&#x306F;&#x3001;&#x6C4E;&#x95A2;&#x6570; <span class="mathjax-exps">$I$</span> &#x306E;&#x975E;&#x81EA;&#x660E;&#x306A;&#x81E8;&#x754C;&#x70B9;&#x3002;</li>
+<li><span class="mathjax-exps">$I$</span> &#x306E; <span class="mathjax-exps">$(\text{PS}) _c$</span> &#x6761;&#x4EF6;&#x304C;&#x6210;&#x7ACB;&#x3059;&#x308B;&#x306E;&#x306F;&#x3001;&#x4F8B;&#x3048;&#x3070; <span class="mathjax-exps">$0 &lt; c &lt; S^{N/2} / N$</span> &#x306B;&#x306A;&#x308B;&#x3002;
+<ul>
+<li>Mountain pass theorem &#x306A;&#x3069;&#x306B;&#x3088;&#x308A;&#x3001; <span class="mathjax-exps">$I$</span> &#x306E; mountain pass level &#x304C; <span class="mathjax-exps">$S^{N/2} / N$</span> &#x672A;&#x6E80;&#x306A;&#x3089;&#x3001;&#x975E;&#x81EA;&#x660E;&#x306A;&#x81E8;&#x754C;&#x70B9;&#x304C;&#x898B;&#x3064;&#x304B;&#x308B;&#x3002;</li>
+</ul>
+</li>
+<li><span class="mathjax-exps">$I$</span> &#x306E;&#x5B9F;&#x969B;&#x306E; mountain pass level &#x3092;&#x8A55;&#x4FA1;&#x3057;&#x3088;&#x3046;&#x3068;&#x3059;&#x308B;&#x3068;&#x3001; Talenti &#x95A2;&#x6570;&#x3092;&#x7D5E;&#x308B;&#x3053;&#x3068;&#x306B;&#x306A;&#x308A;&#x3001; <span class="mathjax-exps">$S^{N/2} / N +$</span> (&#x6B8B;&#x4F59;&#x9805;) &#x306E;&#x5F62;&#x306B;&#x306A;&#x308B;&#x3002;
+<ul>
+<li>&#x4F8B;&#x3048;&#x3070; (&#x6B8B;&#x4F59;&#x9805;) <span class="mathjax-exps">$\leq C \epsilon^\alpha - C&apos; \epsilon^\beta$</span> &#x306E;&#x3088;&#x3046;&#x306A;&#x5F62;&#x306B;&#x306A;&#x308B;&#x3002;</li>
+<li>&#x3086;&#x3048;&#x306B; <span class="mathjax-exps">$\alpha &gt; \beta$</span> &#x306A;&#x3089;&#x3070;&#x3001;&#x6B8B;&#x4F59;&#x9805;&#x304C;&#x8CA0;&#x306B;&#x306A;&#x308B;&#x306E;&#x3067;&#x3001;&#x89E3;&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x793A;&#x3055;&#x308C;&#x308B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x3053;&#x3053;&#x3060;&#x3051;&#x899A;&#x3048;&#x308B;&#xFF1A;</p>
+<ul>
+<li>mountain pass level &#x3084; <span class="mathjax-exps">$(\text{PS})_ c$</span> &#x6761;&#x4EF6;&#x306F;&#x3001;&#x307B;&#x307C;&#x78BA;&#x5B9F;&#x306B; <strong>&#x5883;&#x754C;&#x3067;&#x306E;&#x6B63;&#x78BA;&#x306A;&#x5024;&#x3067;&#x306E;&#x52DD;&#x8CA0;&#x306B;&#x306A;&#x308B;</strong> &#x3002;</li>
+<li><strong>Talenti &#x95A2;&#x6570;&#x306E;&#x7A4D;&#x5206;&#x306E;&#x6B8B;&#x4F59;&#x9805;&#x306E; <span class="mathjax-exps">$\epsilon$</span>-order</strong> &#x304C;&#x3001;&#x89E3;&#x306E;&#x5B58;&#x5728;&#x306B;&#x76F4;&#x7D50;&#x3059;&#x308B;&#x3002;</li>
+</ul>
+<h2 class="mume-header" id="chapter-3-henon-%E5%9E%8B%E6%96%B9%E7%A8%8B%E5%BC%8F">Chapter 3: Henon &#x578B;&#x65B9;&#x7A0B;&#x5F0F;</h2>
+
+<h3 class="mume-header" id="%E4%B8%BB%E5%AE%9A%E7%90%86">&#x4E3B;&#x5B9A;&#x7406;</h3>
+
+<p></p><div class="mathjax-exps">\[\begin{align}     \left\{       \begin{aligned}         - \Delta u &amp; = \lambda \Psi u + \lvert x \rvert^\alpha u^{2^*-1}                   &amp;                                                     &amp; \text{ in } \Omega,                        \\         u          &amp; &gt; 0                                                 &amp;              &amp; \text{ in } \Omega,         \\         u          &amp; = 0                                                 &amp;              &amp; \text{ on } \partial\Omega.       \end{aligned}     \right. \tag{1}   \end{align}\]</div><p></p>
+<p>&#x5B9A;&#x6570; <span class="mathjax-exps">$\lambda$</span> &#x306F; <span class="mathjax-exps">$\lambda &lt; \lambda_1$</span> &#x3092;&#x5145;&#x305F;&#x3059;&#x3082;&#x306E;&#x3068;&#x3059;&#x308B;&#xFF0E;&#x3053;&#x3053;&#x3067; <span class="mathjax-exps">$\lambda_1$</span> &#x306F;&#xFF0C;&#x6B21;&#x306E; Dirichlet &#x56FA;&#x6709;&#x5024;&#x554F;&#x984C;&#x306E;&#x7B2C; <span class="mathjax-exps">$1$</span> &#x56FA;&#x6709;&#x5024;&#x3068;&#x3059;&#x308B;&#xFF1A; <span class="mathjax-exps">$-\Delta \phi = \lambda \Psi \phi \text{ in } \Omega$</span>. &#x307E;&#x305F;&#xFF0C; <span class="mathjax-exps">$\alpha &gt; 0$</span> &#x3068;&#x3059;&#x308B;&#xFF0E;</p>
+<p>&#x95A2;&#x6570; <span class="mathjax-exps">$\Psi \in L^\infty(\Omega) \setminus \{ 0 \}$</span> &#x306B;&#x3064;&#x3044;&#x3066;&#xFF0C;&#x4EE5;&#x4E0B;&#x306E;&#x6761;&#x4EF6;&#x3092;&#x5C0E;&#x5165;&#x3059;&#x308B;&#xFF0E;</p>
+<ul>
+<li><strong>(T1)</strong>: <span class="mathjax-exps">$m &gt; 0$</span>, <span class="mathjax-exps">$\beta \geq 0$</span> &#x53CA;&#x3073;&#x958B;&#x7403; <span class="mathjax-exps">$B \subset \Omega$</span> &#x304C;&#x5B58;&#x5728;&#x3057;&#xFF0C;<span class="mathjax-exps">$x_0 \in \partial \Omega$</span> &#x53CA;&#x3073; <span class="mathjax-exps">$\Psi \geq \Psi_0 \text{ in } \Omega$</span> &#x304C;&#x6210;&#x7ACB;&#x3059;&#x308B;&#xFF0E;&#x3053;&#x3053;&#x3067;&#xFF0C; <span class="mathjax-exps">$\Psi_0$</span> &#x306F;&#x4EE5;&#x4E0B;&#x3067;&#x5B9A;&#x3081;&#x308B;&#xFF0E;<br>
+<div class="mathjax-exps">\[\Psi_0(x) = \begin{cases}   m \left\lvert x - x_0 \right\rvert^\beta   &amp; x \in B, \\   0 &amp; x \not\in B. \end{cases}\]</div></li>
+</ul>
+<blockquote>
+<p><strong>Theorem 1.1.1</strong>: <span class="mathjax-exps">$N \geq 4$</span>, <span class="mathjax-exps">$0 &lt; \lambda &lt; \lambda_1$</span> &#x3068;&#x3059;&#x308B;&#xFF0E;<span class="mathjax-exps">$\Psi \in L^\infty(\Omega) \setminus \{ 0 \}$</span> &#x306F; <span class="mathjax-exps">$0 \leq \Psi \leq 1 \text{ in } \Omega$</span> &#x3092;&#x5145;&#x305F;&#x3059;&#x3082;&#x306E;&#x3068;&#x3059;&#x308B;&#xFF0E; (T1) &#x3092;&#x4EEE;&#x5B9A;&#x3059;&#x308B;&#xFF0E;&#x3053;&#x306E;&#x3068;&#x304D;&#xFF0C;&#x5341;&#x5206;&#x5C0F;&#x3055;&#x306A; <span class="mathjax-exps">$\alpha &gt; 0$</span> &#x306B;&#x5BFE;&#x3057;&#xFF0C;&#x65B9;&#x7A0B;&#x5F0F; (1) &#x306F;&#x89E3; <span class="mathjax-exps">$u \in H_0^1(\Omega)$</span> &#x3092;&#x6301;&#x3064;&#xFF0E;</p>
+</blockquote>
+<h2 class="mume-header" id="henon-%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%85%88%E8%A1%8C%E7%A0%94%E7%A9%B6">Henon &#x65B9;&#x7A0B;&#x5F0F;&#x306E;&#x5148;&#x884C;&#x7814;&#x7A76;</h2>
+
+<h3 class="mume-header" id="henon-%E6%96%B9%E7%A8%8B%E5%BC%8F">Henon &#x65B9;&#x7A0B;&#x5F0F;</h3>
+
+<p></p><div class="mathjax-exps">\[\begin{align}     \left\{     \begin{aligned}       - \Delta u &amp; = \lvert x \rvert^\alpha \lvert u \rvert^{p-2} u                 &amp;                                                &amp; \text{ in } B(0, 1),                          \\       u          &amp; = 0                                            &amp;               &amp; \text{ on } \partial B(0, 1).     \end{aligned}     \right.   \end{align}\]</div><p></p>
+<ul>
+<li>[Henon &apos;73] &#x3067; <span class="mathjax-exps">$N = 1$</span> &#x3067;&#x3001; <span class="mathjax-exps">$u$</span> &#x306B;&#x7D76;&#x5BFE;&#x5024;&#x304C;&#x3064;&#x3044;&#x305F;&#x65B9;&#x7A0B;&#x5F0F;&#x3092;&#x6570;&#x5024;&#x89E3;&#x6790;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x304C;&#x8208;&#x308A;&#x3067;&#x3042;&#x308B;&#x3002;</li>
+<li>[Ni &apos;82] &#x3067;&#x3001; <span class="mathjax-exps">$2 \leq p &lt; 2^*(\alpha) = 2(N + \alpha)/(N - 2)$</span> &#x3067;&#x7403;&#x5BFE;&#x79F0;&#x306A;&#x6B63;&#x5024;&#x89E3;&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x793A;&#x3055;&#x308C;&#x305F;&#x3002;</li>
+<li>&#x6211;&#x3005;&#x306E; (1) &#x306F; Henon &#x65B9;&#x7A0B;&#x5F0F;&#x3068; Brezis-Nirenberg &#x554F;&#x984C;&#x3092;&#x5408;&#x308F;&#x305B;&#x305F;&#x3082;&#x306E;&#x3067;&#x3042;&#x308B;&#x3002;</li>
+</ul>
+<h3 class="mume-header" id="%E7%9B%B4%E6%8E%A5%E3%81%AE%E5%85%88%E8%A1%8C%E7%A0%94%E7%A9%B6">&#x76F4;&#x63A5;&#x306E;&#x5148;&#x884C;&#x7814;&#x7A76;</h3>
+
+<p>&#x5148;&#x884C;&#x7814;&#x7A76;&#x306F; 2 &#x4EF6;&#x3057;&#x304B;&#x306A;&#x3044;&#x3002;</p>
+<p></p><div class="mathjax-exps">\[\begin{align}   \left\{   \begin{aligned}     - \Delta u       &amp; = \lambda u + \lvert x \rvert^\alpha \lvert u     \rvert^{2^*-2} u &amp;                                               &amp; \text{ in } \Omega,                         \\     u                &amp; = 0                                           &amp;              &amp; \text{ on } \partial \Omega.   \end{aligned}   \right. \tag{2} \end{align}\]</div><p></p>
+<p><span class="mathjax-exps">$\alpha &gt; 0$</span>, <span class="mathjax-exps">$\lambda &gt; \lambda_1&apos;$</span> &#x306F;&#x5B9A;&#x6570;&#x3067;&#x3042;&#x308B;&#xFF0E;&#x3053;&#x3053;&#x3067; <span class="mathjax-exps">$\lambda_1&apos;$</span> &#x306F;&#xFF0C;&#x6B21;&#x306E; Dirichlet &#x56FA;&#x6709;&#x5024;&#x554F;&#x984C;&#x306E;&#x7B2C; <span class="mathjax-exps">$1$</span> &#x56FA;&#x6709;&#x5024;&#x3068;&#x3059;&#x308B;&#xFF1A;<span class="mathjax-exps">$-\Delta \phi = \lambda \phi \text{ in } \Omega$</span>. A sign-changing solution &#x306E;&#x5B58;&#x5728;&#x304C;&#x3001;&#x305D;&#x308C;&#x305E;&#x308C;&#x4EE5;&#x4E0B;&#x306E;&#x6761;&#x4EF6;&#x3067;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3002;</p>
+<ul>
+<li>[Long-Yang &apos;12]: <span class="mathjax-exps">$N \geq 7$</span> &#x3001; <span class="mathjax-exps">$\partial \Omega$</span> &#x304C;&#x6ED1;&#x3089;&#x304B;&#x3002;</li>
+<li>[Secchi &apos;12]: <span class="mathjax-exps">$N \geq 5$</span> &#x3001; <span class="mathjax-exps">$\Omega = B(0, 1)$</span> &#x3002;</li>
+</ul>
+<p>&#x6211;&#x3005;&#x306F;&#x3001; <span class="mathjax-exps">$0 &lt; \lambda &lt; \lambda _1$</span> &#x306E;&#x6642;&#x306B;&#x3001; <span class="mathjax-exps">$N \geq 4$</span> &#x3067;&#x6B63;&#x5024;&#x89E3;&#x306E;&#x5B58;&#x5728;&#x3092;&#x793A;&#x3059;&#x3002; <span class="mathjax-exps">$\Psi$</span> &#x306F;&#x95A2;&#x6570;&#x3067;&#x3001; <span class="mathjax-exps">$\Omega$</span> &#x306F;&#x3088;&#x308A;&#x4E00;&#x822C;&#x7684;&#x3067;&#x3042;&#x308B;&#x3002;</p>
+<h2 class="mume-header" id="%E8%87%A8%E7%95%8C-sobolev-%E6%8C%87%E6%95%B0%E3%82%92%E6%8C%81%E3%81%A4-henon-%E5%9E%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AF%E3%81%AA%E3%81%9C%E5%9B%B0%E9%9B%A3%E3%81%8B">&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x3092;&#x6301;&#x3064; Henon &#x578B;&#x65B9;&#x7A0B;&#x5F0F;&#x306F;&#x306A;&#x305C;&#x56F0;&#x96E3;&#x304B;</h2>
+
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x3001; <strong>&#x592A;&#x5B57;&#x306E;&#x90E8;&#x5206;&#x306F;&#x899A;&#x3048;&#x308B;</strong> &#x3002;</p>
+<ul>
+<li>&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x3092;&#x6301;&#x3064;&#x5834;&#x5408;&#x3001; [Brezis-Nirenberg &apos;83] &#x306E;&#x624B;&#x6CD5;&#x304C;&#x6709;&#x52B9;&#x3067;&#x3042;&#x308B;&#x304C;&#x3001; Talenti &#x95A2;&#x6570;&#x3092; <span class="mathjax-exps">$u^{2^* - 1}$</span> &#x306E;&#x4FC2;&#x6570;&#x306E;&#x95A2;&#x6570;&#x306E; <strong>&#x6700;&#x5927;&#x5024;&#x3092;&#x53D6;&#x308B;&#x90E8;&#x5206;&#x3092;&#x4E2D;&#x5FC3;&#x306B;&#x7D5E;&#x308B;</strong> &#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#x3002;
+<ul>
+<li>&#x4F8B;&#x3048;&#x3070;&#x79C1;&#x306E;&#x4FEE;&#x58EB;&#x8AD6;&#x6587;&#x306F;&#x3001;&#x305D;&#x308C;&#x3092;&#x3084;&#x3063;&#x3066;&#x3044;&#x308B;&#x3002;</li>
+<li>&#x4FC2;&#x6570;&#x304C;&#x5B9A;&#x6570;&#x306E;&#x5834;&#x5408;&#x3001;&#x3053;&#x308C;&#x306F;&#x95A2;&#x4FC2;&#x306A;&#x3044;&#x304B;&#x3089;&#x3001;&#x5927;&#x62B5; <span class="mathjax-exps">$0$</span> &#x3092;&#x4E2D;&#x5FC3;&#x306B;&#x7D5E;&#x308B;&#x3002;</li>
+</ul>
+</li>
+<li>&#x3068;&#x3053;&#x308D;&#x304C; Henon &#x578B;&#x306E;&#x5834;&#x5408;&#x3001; <span class="mathjax-exps">$\lvert x \rvert^\alpha$</span> &#x306F; <span class="mathjax-exps">$\Omega$</span> &#x4E0A; <strong>&#x6700;&#x5927;&#x5024;&#x3092;&#x53D6;&#x3089;&#x306A;&#x3044;</strong> &#x3002;<span class="mathjax-exps">$x_0$</span> &#x306B;&#x8FD1;&#x3065;&#x304F;&#x3068; <span class="mathjax-exps">$\sup_{x \in \Omega} \lvert x \rvert^\alpha = 1$</span> &#x306B;&#x8FD1;&#x3065;&#x304F;&#x3002;
+<ul>
+<li><strong>&#x65B0;&#x305F;&#x306A; Talenti &#x95A2;&#x6570;&#x306E;&#x7A4D;&#x5206;&#x306E;&#x8A55;&#x4FA1;&#x304C;&#x5FC5;&#x8981;</strong> &#x306B;&#x306A;&#x308B;&#x3002;
+<ul>
+<li>[Brezis-Nirenberg &apos;83] &#x3068;&#x8A08;&#x7B97;&#x304C;&#x9055;&#x3046;&#x3002; <em>&#x65E2;&#x5B58;&#x306E;&#x8AD6;&#x6587;&#x306E;&#x5F15;&#x7528;&#x3067;&#x306F;&#x6E08;&#x307E;&#x3055;&#x308C;&#x306A;&#x3044;</em> &#x3002;</li>
+</ul>
+</li>
+<li>&#x305D;&#x306E;&#x300C;&#x5F71;&#x97FF;&#x300D;&#x3092;&#x3069;&#x3053;&#x307E;&#x3067;&#x6291;&#x3048;&#x8FBC;&#x3081;&#x308B;&#x304B;&#x304C;&#x7126;&#x70B9;&#x3068;&#x306A;&#x308B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="chapter-2-%E7%A7%BB%E5%8B%95%E3%81%99%E3%82%8B-talenti-%E9%96%A2%E6%95%B0-u_epsilon-l">Chapter 2: &#x79FB;&#x52D5;&#x3059;&#x308B; Talenti &#x95A2;&#x6570; <span class="mathjax-exps">$u_{\epsilon, l}$</span></h2>
+
+<p></p><div class="mathjax-exps">\[\begin{align}     u_{\epsilon, l}(x) &amp;= \frac{\xi_l(x)}{\left( \epsilon + \left\lvert x - x_l \right\rvert^2 \right)^{(N - 2)/2}}, \\     v_{\epsilon, l}(x) &amp;= \frac{u_{\epsilon, l}(x)}{\left\| \lvert x \rvert^{\alpha/2^*} u_{\epsilon, l} \right\|_{L^{2^*(\Omega)}}}.   \end{align}\]</div><p></p>
+<ul>
+<li><span class="mathjax-exps">$\epsilon &gt; 0$</span>, <span class="mathjax-exps">$0 &lt; l &lt; 1$</span>.</li>
+<li><span class="mathjax-exps">$x_l = (1 - l, 0, \dots, 0) \in \mathbb{R}^N$</span>.</li>
+<li><span class="mathjax-exps">$\{ \xi_l \}_{0 &lt; l &lt; 1} \subset C^\infty_c (\Omega)$</span> &#x306F;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x6761;&#x4EF6;&#x3092;&#x5145;&#x305F;&#x3059;&#x30AB;&#x30C3;&#x30C8;&#x30AA;&#x30D5;&#x95A2;&#x6570;&#x3002;</li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x3067;&#x306F; <span class="mathjax-exps">$l = l(\epsilon)$</span> &#x306F; <span class="mathjax-exps">$\epsilon &gt; 0$</span> &#x306E;&#x95A2;&#x6570;&#x3068;&#x898B;&#x308B;&#x3002; <span class="mathjax-exps">$\epsilon \leq l$</span> &#x3068;&#x3001; <span class="mathjax-exps">$l \to 0$</span> as <span class="mathjax-exps">$\epsilon \to 0$</span> &#x3092;&#x5145;&#x305F;&#x3059;&#x3082;&#x306E;&#x3068;&#x3059;&#x308B;&#x3002;</p>
+<h3 class="mume-header" id="%E8%A9%95%E4%BE%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">&#x8A55;&#x4FA1;&#x306B;&#x3064;&#x3044;&#x3066;</h3>
+
+<p>&#x4EE5;&#x4E0B;&#x3001;&#x7A4D;&#x5206;&#x306E;&#x8A55;&#x4FA1;&#x3092;&#x8FF0;&#x3079;&#x308B;&#x3002;&#x8907;&#x96D1;&#x306A;&#x306E;&#x3067; <strong>&#x773A;&#x3081;&#x308B;&#x3060;&#x3051;&#x3067;&#x826F;&#x3044;</strong> &#x3002;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3092;&#x53E3;&#x982D;&#x3067;&#x6982;&#x8AAC;&#x3059;&#x308B;&#x3002;</p>
+<blockquote>
+<p><strong>Lemma 2.2.1</strong>&#xFF1A; <span class="mathjax-exps">$C_1, C_2, C &gt; 0$</span> &#x304C;&#x5B58;&#x5728;&#x3057;&#x3001;&#x5C0F;&#x3055;&#x3044; <span class="mathjax-exps">$\epsilon &gt; 0$</span> &#x306B;&#x5BFE;&#x3057;&#x6B21;&#x5F0F;&#x304C;&#x6210;&#x7ACB;&#x3059;&#x308B;&#x3002;<br>
+</p><div class="mathjax-exps">\[\begin{multline}     \left\| DU \right\|_{L^2(\mathbb{R}^N)}^2 \epsilon^{-(N-2)/2} - C_1     l^{-(N-2)} \\ \leq     \left\| Du_{\epsilon, l} \right\|_{L^2(\Omega)}^2 \\     \leq     \left\| DU \right\|_{L^2(\mathbb{R}^N)}^2 \epsilon^{-(N-2)/2} + C_2     l^{-(N-2)},   \end{multline}\]</div><br>
+<div class="mathjax-exps">\[\begin{multline}    (1 - 2l)^ {2\alpha/2^ *} \left( \left\| U     \right\|^ {2^ *}_{L^ {2^ *}(\mathbb{R}^N)}\epsilon^{-N/2} - Cl^{-N}     \right)^{2/2^*} \\ \leq     \left\|     \left\lvert x \right\rvert^{\alpha/2^*} u_{\epsilon, l       }\right\|_{L^{2^*}(\Omega)}^2     \leq \left\| U    \right\|^{2}_{L^{2^*}(\mathbb{R}^N)}\epsilon^{-(N-2)/2}.   \end{multline}\]</div><p></p>
+</blockquote>
+<h2 class="mume-header" id="lepsilon-epsilongamma-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6"><span class="mathjax-exps">$l(\epsilon) = \epsilon^\gamma$</span> &#x306B;&#x3064;&#x3044;&#x3066;</h2>
+
+<p><span class="mathjax-exps">$\sqrt{\epsilon}$</span> &#x306B;&#x300C;&#x8FFD;&#x3044;&#x3064;&#x304B;&#x306A;&#x3044;&#x300D;&#x3088;&#x3046;&#x306B;&#x3057;&#x306A;&#x304F;&#x3066;&#x306F;&#x306A;&#x3089;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001; <span class="mathjax-exps">$0 &lt; \gamma &lt; 1/2$</span> &#x3067;&#x3042;&#x308B;&#x3002;</p>
+<p>[Long-Yang &apos;12], [Secchi &apos;12] &#x306F; <span class="mathjax-exps">$\gamma$</span> &#x3092;&#x56FA;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;&#x6211;&#x3005;&#x306F;&#x3001; <span class="mathjax-exps">$\Psi$</span> &#x304C; <span class="mathjax-exps">$\partial \Omega$</span> &#x3067;&#x6D88;&#x3048;&#x308B;&#x53EF;&#x80FD;&#x6027;&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001; <span class="mathjax-exps">$0 &lt; \gamma &lt; 1/2$</span> &#x3092; <em>&#x9078;&#x3076;</em> &#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#x3002;</p>
+<blockquote>
+<p><strong>Corollary 2.2.6</strong>&#xFF1A; <span class="mathjax-exps">$0 &lt; \gamma &lt; 1/2$</span> &#x3068;&#x3057;&#x3001; <span class="mathjax-exps">$l = l(\epsilon) = \epsilon^\gamma$</span> &#x3068;&#x3059;&#x308B;&#x3002;&#x3053;&#x306E;&#x3068;&#x304D;&#x3001; <span class="mathjax-exps">$\epsilon \to 0$</span> &#x306E;&#x3068;&#x304D;&#x6B21;&#x5F0F;&#x304C;&#x6210;&#x7ACB;&#x3059;&#x308B;&#x3002;<br>
+</p><div class="mathjax-exps">\[\int_\Omega \Psi_0 u_{\epsilon, l}^2 dx     = \begin{cases}       O(\epsilon^{\beta\gamma-(N-4)/2})                    &amp; N \geq 5, \\       O(\epsilon^{\beta\gamma}\lvert \log \epsilon \rvert) &amp; N = 4,    \\       O(\epsilon^{(\beta + 1)\gamma})                      &amp; N = 3.     \end{cases}\]</div><p></p>
+</blockquote>
+<h3 class="mume-header" id="n-geq-5-%E3%81%AE%E5%A0%B4%E5%90%88"><span class="mathjax-exps">$N \geq 5$</span> &#x306E;&#x5834;&#x5408;</h3>
+
+<p>(&#x6B8B;&#x4F59;&#x9805;) <span class="mathjax-exps">$&lt; 0$</span> &#x306F;&#x4EE5;&#x4E0B;&#x3068;&#x540C;&#x5024;&#x306B;&#x306A;&#x308B;&#x3002;</p>
+<p></p><div class="mathjax-exps">\[\left( S - S (1 - 2l)^ {2\alpha/2^ *} \right) + \left( C \epsilon^{(N-2)(1/2 - \gamma)} - C&apos; \epsilon^{(\beta \gamma + 1)} \right) &lt; 0. \tag{3}\]</div><p></p>
+<p>2 &#x9805;&#x76EE;&#x304C;&#x8CA0;&#x306B;&#x306A;&#x308B;&#x3088;&#x3046;&#x306A; <span class="mathjax-exps">$\epsilon &gt; 0$</span> &#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x6761;&#x4EF6;&#x306F;&#x3001;</p>
+<p></p><div class="mathjax-exps">\[\gamma &lt; \frac{N-4}{2(\beta + N - 2)}.\]</div><p></p>
+<p>&#x3053;&#x308C;&#x3092;&#x5145;&#x305F;&#x3059; <span class="mathjax-exps">$0 &lt; \gamma &lt; 1/2$</span> &#x306F;&#x3001; <span class="mathjax-exps">$N \geq 5$</span> &#x306E;&#x3068;&#x304D;&#x5B58;&#x5728;&#x3059;&#x308B;&#x3002;&#x3088;&#x3063;&#x3066; 2 &#x9805;&#x76EE;&#x3092;&#x8CA0;&#x306B;&#x3059;&#x308B; <span class="mathjax-exps">$\epsilon &gt; 0$</span> &#x304C;&#x5F97;&#x3089;&#x308C;&#x308B;&#x3002;&#x305D;&#x308C;&#x3092;&#x56FA;&#x5B9A;&#x3057;&#x3066; <span class="mathjax-exps">$\alpha &gt; 0$</span> &#x3092;&#x5C0F;&#x3055;&#x304F;&#x3059;&#x308C;&#x3070;&#x3001; (3) &#x306F;&#x9054;&#x6210;&#x3055;&#x308C;&#x308B;&#x3002;&#x3088;&#x3063;&#x3066;&#x89E3;&#x304C;&#x5F97;&#x3089;&#x308C;&#x308B;&#x3002;</p>
+<h2 class="mume-header" id="lepsilon-lvert-log-epsilon-rvert-k-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6"><span class="mathjax-exps">$l(\epsilon) = \lvert \log \epsilon \rvert^{-k}$</span> &#x306B;&#x3064;&#x3044;&#x3066;</h2>
+
+<p>&#x611F;&#x899A;&#x7684;&#x306B;&#x3044;&#x3046;&#x3068;&#x300C; <span class="mathjax-exps">$\gamma$</span> &#x304C; <span class="mathjax-exps">$0$</span> &#x3088;&#x308A;&#x5C0F;&#x3055;&#x3044;&#x304C;&#x3001;&#x8CA0;&#x3067;&#x306F;&#x306A;&#x3044;&#x300D;&#x5834;&#x5408;&#x306B;&#x76F8;&#x5F53;&#x3059;&#x308B;&#x3002;&#x3059;&#x306A;&#x308F;&#x3061; <em>&#x3053;&#x306E;&#x624B;&#x6CD5;&#x306F;&#x300C; <span class="mathjax-exps">$\gamma &lt; 0$</span> &#x300D;&#x306E;&#x5834;&#x5408;&#x306B;&#x3082;&#x9069;&#x7528;&#x53EF;&#x80FD;&#x3067;&#x3042;&#x308B;</em> &#x3068;&#x8003;&#x3048;&#x3066;&#x3088;&#x308D;&#x3057;&#x3044;&#x3002;</p>
+<blockquote>
+<p><strong>Corollary 2.2.7</strong>&#xFF1A; <span class="mathjax-exps">$k &gt; 0$</span> &#x3068;&#x3057;&#x3001; <span class="mathjax-exps">$l = l(\epsilon) = \lvert \log \epsilon \rvert^{-k}$</span> &#x3068;&#x3059;&#x308B;&#x3002;&#x3053;&#x306E;&#x3068;&#x304D;&#x3001; <span class="mathjax-exps">$\epsilon \to 0$</span> &#x306E;&#x3068;&#x304D;&#x6B21;&#x5F0F;&#x304C;&#x6210;&#x7ACB;&#x3059;&#x308B;&#x3002;<br>
+</p><div class="mathjax-exps">\[\int_\Omega \Psi_0 u_{\epsilon, l}^2 dx   = \begin{cases}     O(\lvert \log \epsilon \rvert^{-\beta k} \epsilon^{-(N-4)/2})                    &amp; N \geq 5, \\     O(\lvert \log \epsilon \rvert^{1 -\beta k}) &amp; N = 4,    \\     O(\lvert \log \epsilon \rvert^{-(\beta + 1)k})  &amp; N = 3   \end{cases}\]</div><p></p>
+</blockquote>
+<h3 class="mume-header" id="%E6%A8%99%E8%AA%9Elog-%E3%81%AF%E5%AE%9A%E6%95%B0">&#x6A19;&#x8A9E;&#x300C;<span class="mathjax-exps">$\log$</span> &#x306F;&#x5B9A;&#x6570;&#x300D;</h3>
+
+<p>&#x3082;&#x3068;&#x3082;&#x3068;&#x8A08;&#x7B97;&#x6A5F;&#x696D;&#x754C;&#x3067;&#x8A00;&#x308F;&#x308C;&#x3066;&#x3044;&#x308B;&#x6A19;&#x8A9E;(&#xFF1F;)&#x3002;</p>
+<blockquote>
+<p><strong>&#x4F8B;</strong> &#xFF1A;&#x9577;&#x3055; <span class="mathjax-exps">$n$</span> &#x306E;&#x6587;&#x5B57;&#x5217;&#x306E; suffix array &#x3092;&#x69CB;&#x7BC9;&#x3059;&#x308B;&#x3002;</p>
+<ul>
+<li>&#x6B63;&#x76F4;&#x306B;&#x3084;&#x308B;&#x65B9;&#x6CD5;&#xFF1A;<span class="mathjax-exps">$O(n^2 \log n)$</span>&#x3002;</li>
+<li>Mamber-Myers &#x6CD5;&#xFF1A;<span class="mathjax-exps">$O(n (\log n)^2)$</span>&#x3002;</li>
+<li>SA-IS &#x6CD5;&#xFF1A;<span class="mathjax-exps">$O(n)$</span>&#x3002;</li>
+</ul>
+<p>&#x666E;&#x901A;&#x306E;&#x8A08;&#x7B97;&#x6A5F;&#x3067;&#x3084;&#x308B;&#x3068;&#x3001;&#x4F8B;&#x3048;&#x3070;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="mathjax-exps">$O(n^2 \log n)$</span></th>
+<th><span class="mathjax-exps">$O(n (\log n)^2)$</span></th>
+<th><span class="mathjax-exps">$O(n)$</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="mathjax-exps">$n \approx 10^6$</span></td>
+<td>&#x6570;&#x5206;</td>
+<td><strong>&#x4E00;&#x77AC;</strong></td>
+<td><strong>&#x4E00;&#x77AC;</strong></td>
+</tr>
+<tr>
+<td><span class="mathjax-exps">$n \approx 10^{10}$</span></td>
+<td>&#x8AD6;&#x5916;</td>
+<td>(&#x591A;&#x5206;&#x6570;&#x65E5;)</td>
+<td>&#x7D04; 20 &#x5206;</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h3 class="mume-header" id="n-4-%E3%81%AE%E5%A0%B4%E5%90%88"><span class="mathjax-exps">$N = 4$</span> &#x306E;&#x5834;&#x5408;</h3>
+
+<p>(&#x6B8B;&#x4F59;&#x9805;) <span class="mathjax-exps">$&lt; 0$</span> &#x306F;&#x4EE5;&#x4E0B;&#x3068;&#x540C;&#x5024;&#x306B;&#x306A;&#x308B;&#x3002;</p>
+<p></p><div class="mathjax-exps">\[\left( S - S (1 - 2l)^ {2\alpha/2^ *} \right) + \left( C \epsilon \lvert \log \epsilon \rvert^ {2k} - C&apos; \epsilon \lvert \log \epsilon \rvert^{1 - \beta k} \right) &lt; 0.\]</div><p></p>
+<p>2 &#x9805;&#x76EE;&#x304C;&#x8CA0;&#x306B;&#x306A;&#x308B;&#x3088;&#x3046;&#x306A; <span class="mathjax-exps">$\epsilon &gt; 0$</span> &#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x6761;&#x4EF6;&#x306F;&#x3001;</p>
+<p></p><div class="mathjax-exps">\[k &lt; \frac{1}{2 + \beta}.\]</div><p></p>
+<p>&#x4EE5;&#x4E0B;&#x540C;&#x3058;&#x3002;</p>
+<h2 class="mume-header" id="chapter-2-u_epsilon-l-%E3%81%AE%E8%A9%95%E4%BE%A1%E6%89%8B%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E3%81%BE%E3%81%A8%E3%82%81">Chapter 2: <span class="mathjax-exps">$u_{\epsilon, l}$</span> &#x306E;&#x8A55;&#x4FA1;&#x624B;&#x6CD5;&#x306B;&#x3064;&#x3044;&#x3066;&#x306E;&#x307E;&#x3068;&#x3081;</h2>
+
+<p>&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x3092;&#x6301;&#x3064;&#x65B9;&#x7A0B;&#x5F0F;&#x3092; Henon &#x578B;&#x306B;&#x62E1;&#x5F35;&#x3059;&#x308B;&#x969B;&#x306B;&#x4F7F;&#x3048;&#x308B;&#x3002;</p>
+<p>&#x65E2;&#x5B58;&#x306E;&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x3092;&#x6301;&#x3064;&#x65B9;&#x7A0B;&#x5F0F;&#x306E;&#x7D50;&#x679C;&#x306E;&#x3046;&#x3061;&#x3001;</p>
+<ul>
+<li>&#x6307;&#x6570;&#x306E;&#x6BD4;&#x3079;&#x5408;&#x3044;&#x306B;&#x306A;&#x308B;&#x3082;&#x306E;(&#x4F8B;&#xFF1A; <span class="mathjax-exps">$C\epsilon^\alpha - C&apos;\epsilon^\beta &lt; 0$</span> &#x306E;&#x578B;)&#x306F; <strong>&#x307B;&#x307C;&#x305D;&#x306E;&#x307E;&#x307E;&#x5B58;&#x5728;&#x5B9A;&#x7406;&#x304C;&#x51FA;&#x3066;&#x304F;&#x308B;</strong> &#x3068;&#x898B;&#x8FBC;&#x307E;&#x308C;&#x308B;&#x3002;
+<ul>
+<li>&#x305F;&#x3068;&#x3048; <span class="mathjax-exps">$\lvert \log \epsilon \rvert$</span> &#x306E;&#x5DEE;&#x3057;&#x304B;&#x306A;&#x304F;&#x3066;&#x3082;&#x3001;&#x52DD;&#x3066;&#x308B;&#x3002;
+<ul>
+<li>Brezis-Nirenberg &#x306E; <span class="mathjax-exps">$N = 4$</span> &#x3067;&#x4ECA;&#x56DE;&#x52DD;&#x3063;&#x305F;&#x3002;</li>
+</ul>
+</li>
+<li>&#x5C06;&#x6765;&#x3001; <em>&#x3053;&#x308C;&#x4EE5;&#x4E0A;&#x5F37;&#x3044;&#x7D50;&#x679C;&#x3092;&#x5F97;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x306A;&#x3044;</em> &#x3002;</li>
+</ul>
+</li>
+<li>&#x4E00;&#x65B9;&#x3067;&#x3001;&#x6307;&#x6570;&#x304C;&#x4E00;&#x81F4;&#x3057;&#x3066;&#x3044;&#x3066;&#x4FC2;&#x6570;&#x306E;&#x6BD4;&#x3079;&#x5408;&#x3044;&#x306B;&#x306A;&#x308B;&#x5834;&#x5408;(&#x4F8B;&#xFF1A; <span class="mathjax-exps">$(A - A&apos;) \epsilon^\alpha &lt; 0$</span> &#x306E;&#x578B;)&#x306F;&#x3001; <strong>&#x5FC5;&#x305A;&#x8CA0;&#x3051;&#x308B;</strong> &#x3002;
+<ul>
+<li>Brezis-Nirenberg &#x306E; <span class="mathjax-exps">$N = 3$</span> &#x304C;&#x305D;&#x306E;&#x4F8B;&#x3002;&#x4ECA;&#x56DE;&#x306F;&#x5B58;&#x5728;&#x5B9A;&#x7406;&#x304C;&#x51FA;&#x3066;&#x3053;&#x306A;&#x304B;&#x3063;&#x305F;&#x3002;
+<ul>
+<li>&#x3057;&#x304B;&#x3057;&#x5C11;&#x3057;&#x5DE5;&#x592B;&#x3057;&#x305F;&#x65B9;&#x7A0B;&#x5F0F;&#x306B;&#x306A;&#x308B;&#x3068;&#x3001;&#x3059;&#x3050;&#x306B;&#x3053;&#x306E;&#x5834;&#x5408;&#x306F;&#x5B58;&#x5728;&#x5B9A;&#x7406;&#x304C;&#x51FA;&#x306A;&#x304F;&#x306A;&#x308B;&#x50BE;&#x5411;&#x306B;&#x3042;&#x308B;&#x3002;&#x3060;&#x304B;&#x3089; <em>&#x9069;&#x7528;&#x7BC4;&#x56F2;&#x306B;&#x6539;&#x3081;&#x3066;&#x5927;&#x304D;&#x306A;&#x5236;&#x7D04;&#x3092;&#x4E0E;&#x3048;&#x305F;&#x8A33;&#x3067;&#x306F;&#x306A;&#x3044;</em> &#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="psi-%E3%81%8C%E5%A2%83%E7%95%8C%E3%81%A7%E6%B6%88%E3%81%88%E3%82%8B%E9%9D%9E%E8%87%AA%E6%98%8E%E3%81%AA%E4%BE%8B"><span class="mathjax-exps">$\Psi$</span> &#x304C;&#x5883;&#x754C;&#x3067;&#x6D88;&#x3048;&#x308B;&#x975E;&#x81EA;&#x660E;&#x306A;&#x4F8B;</h2>
+
+<p><span class="mathjax-exps">$\beta_0 &gt; 0$</span>, <span class="mathjax-exps">$\Omega = B(0, 1)$</span>, <span class="mathjax-exps">$\Psi(x) = (1 - \lvert x \rvert)^{\beta_0}$</span> &#x304C;&#x3001; (T1) &#x3092;&#x5145;&#x305F;&#x3059;&#x3002;&#x3053;&#x306E;&#x4F8B;&#x3067;&#x306F; <span class="mathjax-exps">$\Psi$</span> &#x304C;&#x5883;&#x754C;&#x3067;&#x6D88;&#x3048;&#x308B;&#x3002;</p>
+<blockquote>
+<ul>
+<li><strong>(T1)</strong>: <span class="mathjax-exps">$m &gt; 0$</span>, <span class="mathjax-exps">$\beta \geq 0$</span> &#x53CA;&#x3073;&#x958B;&#x7403; <span class="mathjax-exps">$B \subset \Omega$</span> &#x304C;&#x5B58;&#x5728;&#x3057;&#xFF0C;<span class="mathjax-exps">$x_0 \in \partial \Omega$</span> &#x53CA;&#x3073; <span class="mathjax-exps">$\Psi \geq \Psi_0 \text{ in } \Omega$</span> &#x304C;&#x6210;&#x7ACB;&#x3059;&#x308B;&#xFF0E;&#x3053;&#x3053;&#x3067;&#xFF0C; <span class="mathjax-exps">$\Psi_0$</span> &#x306F;&#x4EE5;&#x4E0B;&#x3067;&#x5B9A;&#x3081;&#x308B;&#xFF0E;<br>
+<div class="mathjax-exps">\[\Psi_0(x) = \begin{cases}   m \left\lvert x - x_0 \right\rvert^\beta   &amp; x \in B, \\   0 &amp; x \not\in B. \end{cases}\]</div></li>
+</ul>
+</blockquote>
+<p>&#x8A3C;&#x660E;&#x306F;&#x3001; 2 &#x6B21;&#x5143;&#x5E73;&#x9762;&#x306B;&#x5C04;&#x5F71;&#x3057;&#x3001;&#x521D;&#x7B49;&#x5E7E;&#x4F55;&#x3092;&#x7528;&#x3044;&#x308B;&#x3002; <span class="mathjax-exps">$B$</span> &#x306E;&#x76F4;&#x5F84;&#x3092; <span class="mathjax-exps">$1$</span> &#x672A;&#x6E80;&#x3068;&#x3057;&#x3001; <span class="mathjax-exps">$\beta = 2 \beta_0$</span> &#x3068;&#x3057;&#x3001; <span class="mathjax-exps">$m &gt; 0$</span> &#x3092;&#x5C0F;&#x3055;&#x304F;&#x3059;&#x308B;&#x3002;</p>
+<h2 class="mume-header" id="chapter-4-kirchhoff-%E5%9E%8B%E6%96%B9%E7%A8%8B%E5%BC%8F">Chapter 4: Kirchhoff &#x578B;&#x65B9;&#x7A0B;&#x5F0F;</h2>
+
+<p></p><div class="mathjax-exps">\[\begin{align}     \left\{     \begin{aligned}       - \left( a + b \left( \int_\Omega \lvert Du \rvert^2 dx \right)^{(p-2)/2} \right) \Delta u &amp;= \Psi u^{q-1} + \lvert x \rvert^\alpha u^{2^* - 1}                 &amp;                                                     &amp; \text{ in } \Omega,                        \\       u          &amp; &gt; 0                                                 &amp;              &amp; \text{ in } \Omega,         \\       u          &amp; = 0                                                 &amp;              &amp; \text{ on } \partial\Omega.     \end{aligned}     \right.   \end{align} \tag{4}\]</div><p></p>
+<ul>
+<li><span class="mathjax-exps">$\alpha \geq 0$</span>, <span class="mathjax-exps">$p &gt; 2$</span>, <span class="mathjax-exps">$q \geq 2$</span> &#x306F;&#x5B9A;&#x6570;&#x3002;</li>
+<li><span class="mathjax-exps">$a \geq 0$</span> &#x3068; <span class="mathjax-exps">$b \geq 0$</span> &#x306F; <span class="mathjax-exps">$a + b &gt; 0$</span> &#x3092;&#x5145;&#x305F;&#x3059;&#x5B9A;&#x6570;&#x3002;</li>
+</ul>
+<p>Kirchhoff-Henon &#x578B;&#x65B9;&#x7A0B;&#x5F0F;&#x3068;&#x547C;&#x3076;&#x3053;&#x3068;&#x306B;&#x3057;&#x305F;&#x3002;</p>
+<h3 class="mume-header" id="%E4%B8%BB%E5%AE%9A%E7%90%86-1">&#x4E3B;&#x5B9A;&#x7406;</h3>
+
+<blockquote>
+<p><strong>Theorem 1.1.2</strong>: <span class="mathjax-exps">$2 &lt; p &lt; q &lt; 2^*$</span> &#x3092;&#x4EEE;&#x5B9A;&#x3059;&#x308B;&#x3002; <span class="mathjax-exps">$\Psi \in L^\infty(\Omega) \setminus \{ 0 \}$</span> &#x306F; &#x3042;&#x308B;&#x5B9A;&#x6570; <span class="mathjax-exps">$\kappa &gt; 0$</span> &#x304C;&#x5B58;&#x5728;&#x3057; <span class="mathjax-exps">$0 \leq \Psi \leq \kappa \text{ in } \Omega$</span> &#x3092;&#x5145;&#x305F;&#x3059;&#x3068;&#x3059;&#x308B;&#x3002;&#x6B21;&#x306E; (1), (2) &#x306E;&#x3044;&#x305A;&#x308C;&#x304B;&#x306E;&#x6210;&#x7ACB;&#x3092;&#x4EEE;&#x5B9A;&#x3059;&#x308B;&#x3002;<br>(1) <span class="mathjax-exps">$N = 3$</span> and <span class="mathjax-exps">$4 &lt; q &lt; 2^* = 6$</span>,<br>(2) <span class="mathjax-exps">$N \geq 4$</span>.</p>
+<ol>
+<li><span class="mathjax-exps">$\alpha = 0$</span> &#x306E;&#x5834;&#x5408;&#xFF1A; <span class="mathjax-exps">$\Psi \geq \kappa_0 \text{ in } \omega$</span> &#x3092;&#x5145;&#x305F;&#x3059;&#x958B;&#x96C6;&#x5408; <span class="mathjax-exps">$\omega \subset \Omega$</span> &#x3068; <span class="mathjax-exps">$\kappa_0 &gt; 0$</span> &#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x3068;&#x4EEE;&#x5B9A;&#x3059;&#x308B;&#x3002;&#x3053;&#x306E;&#x3068;&#x304D;&#x3001;&#x65B9;&#x7A0B;&#x5F0F; (4) &#x306F;&#x89E3; <span class="mathjax-exps">$u \in H_0^1(\Omega)$</span> &#x3092;&#x6301;&#x3064;&#x3002;</li>
+<li><span class="mathjax-exps">$\alpha &gt; 0$</span> &#x306E;&#x5834;&#x5408;&#xFF1A; &#x524D;&#x8FF0;&#x306E; (T1) &#x3092;&#x4EEE;&#x5B9A;&#x3059;&#x308B;&#x3002;&#x3053;&#x306E;&#x3068;&#x304D;&#xFF0C;&#x5341;&#x5206;&#x5C0F;&#x3055;&#x306A; <span class="mathjax-exps">$\alpha &gt; 0$</span> &#x306B;&#x5BFE;&#x3057;&#xFF0C;&#x65B9;&#x7A0B;&#x5F0F; (4) &#x306F;&#x89E3; <span class="mathjax-exps">$u \in H_0^1(\Omega)$</span> &#x3092;&#x6301;&#x3064;&#xFF0E;</li>
+</ol>
+</blockquote>
+<p>&#x4E3B;&#x306A;&#x5B9A;&#x7406;&#x306F; 2. &#x306E; <span class="mathjax-exps">$\alpha &gt; 0$</span> &#x306E;&#x5834;&#x5408;&#x3067;&#x3042;&#x308A;&#x3001;&#x4EE5;&#x4E0B;&#x3053;&#x308C;&#x3092;&#x8B70;&#x8AD6;&#x3059;&#x308B;&#x3002;&#x524D;&#x9805;&#x306E;&#x77E5;&#x898B;&#x3092;&#x7528;&#x3044;&#x3066;&#x3001;&#x3053;&#x308C;&#x3092;&#x5C0E;&#x304F;&#x3002;</p>
+<h2 class="mume-header" id="kirchhoff-%E5%9E%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%85%88%E8%A1%8C%E7%A0%94%E7%A9%B6">Kirchhoff &#x578B;&#x65B9;&#x7A0B;&#x5F0F;&#x306E;&#x5148;&#x884C;&#x7814;&#x7A76;</h2>
+
+<p>&#x3082;&#x3068;&#x3082;&#x3068;&#x6642;&#x9593;&#x767A;&#x5C55;&#x3059;&#x308B;&#x65B9;&#x7A0B;&#x5F0F;&#x3002;&#x96FB;&#x78C1;&#x6C17;&#x5B66;&#x3068;&#x95A2;&#x4FC2;&#x3059;&#x308B;&#x3002; <span class="mathjax-exps">$p = 4$</span> &#x3068;&#x3057;&#x305F;</p>
+<p></p><div class="mathjax-exps">\[-\left( a + b \left( \int_\Omega \lvert Du \rvert^2 dx \right) \right) \Delta u = f(u)\]</div><p></p>
+<p>&#x306E;&#x578B;&#x306E;&#x65B9;&#x7A0B;&#x5F0F;&#x3092; <em>Kirchhoff &#x578B;&#x306E;&#x6955;&#x5186;&#x578B;&#x65B9;&#x7A0B;&#x5F0F;</em> &#x3068;&#x3044;&#x3046;&#x3002;&#x3053;&#x306E;&#x5834;&#x5408;&#x3001;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x6C4E;&#x95A2;&#x6570;&#x306F;</p>
+<p></p><div class="mathjax-exps">\[I(u) = \frac{a}{2} \left\| Du \right\|_ {L^ 2(\Omega)}^ 2 + \frac{b}{4} \left\| Du \right\|_ {L^ 2(\Omega)}^ 4 - F(u)\]</div><p></p>
+<p>&#x306E;&#x578B;&#x306B;&#x306A;&#x308B;&#x304C;&#x3001;&#x771F;&#x3093;&#x4E2D;&#x306E;&#x9805;(&#x306B;&#x7531;&#x6765;&#x3059;&#x308B;&#x5143;&#x306E;&#x65B9;&#x7A0B;&#x5F0F;&#x306E;&#x9805;)&#x3092; <em>non-local term</em> &#x3068;&#x3044;&#x3046;&#x3002;</p>
+<h3 class="mume-header" id="%E5%A4%89%E5%88%86%E6%B3%95%E7%9A%84%E7%A0%94%E7%A9%B6%E3%81%AE%E8%88%88%E3%82%8A">&#x5909;&#x5206;&#x6CD5;&#x7684;&#x7814;&#x7A76;&#x306E;&#x8208;&#x308A;</h3>
+
+<ul>
+<li>[Ma-Rivera &apos;03] &#x304C; Kirchhoff &#x578B;&#x306E;&#x6955;&#x5186;&#x578B;&#x65B9;&#x7A0B;&#x5F0F;&#x306B;&#x5909;&#x5206;&#x6CD5;&#x3092;&#x5C0E;&#x5165;&#x3057;&#x305F;&#x3002;</li>
+<li>[Alves-Corr&#xEA;a-Ma &apos;05] &#x304C; truncated method &#x3092;&#x5C0E;&#x5165;&#x3057;&#x305F;&#x3002;</li>
+</ul>
+<h3 class="mume-header" id="%E8%87%A8%E7%95%8C-sobolev-%E6%8C%87%E6%95%B0%E3%82%92%E6%8C%81%E3%81%A4%E6%96%B9%E7%A8%8B%E5%BC%8F">&#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x3092;&#x6301;&#x3064;&#x65B9;&#x7A0B;&#x5F0F;</h3>
+
+<p>&#x3053;&#x3053;&#x306F;&#x899A;&#x3048;&#x308B;&#xFF1A; &#x81E8;&#x754C; Sobolev &#x6307;&#x6570;&#x3092;&#x6301;&#x3064; Kirchhoff &#x578B;&#x65B9;&#x7A0B;&#x5F0F;&#x306F;&#x3001; <strong>&#x6B21;&#x5143;&#x306B;&#x3088;&#x3063;&#x3066;&#x624B;&#x6CD5;&#x304C;&#x7570;&#x306A;&#x308B;</strong> &#x3002;&#x305D;&#x306E;&#x6839;&#x672C;&#x7684;&#x306A;&#x7406;&#x7531;&#x306F;&#x3001; <span class="mathjax-exps">$p = 4$</span> &#x3068; <span class="mathjax-exps">$2^* = 2N/(N - 2)$</span> &#x306E;&#x5927;&#x5C0F;&#x95A2;&#x4FC2;&#x304C;&#x3001;&#x6B21;&#x5143;&#x306B;&#x3088;&#x3063;&#x3066;&#x7570;&#x306A;&#x308B;&#x304B;&#x3089;&#x3067;&#x3042;&#x308B;&#x3002;</p>
+<p></p><div class="mathjax-exps">\[p = 4   \begin{cases}     &lt; 2^* = 6 &amp; N = 3, \\     = 2^* = 4 &amp; N = 4, \\     &gt; 2^* &amp; N \geq 5.   \end{cases}\]</div><p></p>
+<h2 class="mume-header" id="%E5%95%8F%E9%A1%8C%E7%82%B9">&#x554F;&#x984C;&#x70B9;</h2>
+
+<p><span class="mathjax-exps">$N = 3$</span>, <span class="mathjax-exps">$4 &lt; q &lt; 6$</span> &#x306E;&#x5834;&#x5408;&#x306B;&#x3001;&#x79C1;&#x304C;&#x9069;&#x7528;&#x3057;&#x305F;&#x3044;&#x624B;&#x6CD5;&#x304C;&#x3042;&#x308B;&#x3002;&#x3057;&#x304B;&#x3057;&#x3001;</p>
+<h3 class="mume-header" id="non-local-term-%E3%82%92%E6%8B%A1%E5%BC%B5">non-local term &#x3092;&#x62E1;&#x5F35;</h3>
+
+<h2 class="mume-header" id="%E6%AC%A1%E3%81%AE%E5%95%8F%E9%A1%8C%E7%82%B9">&#x6B21;&#x306E;&#x554F;&#x984C;&#x70B9;</h2>
+
+<h3 class="mume-header" id="explicitly-%E3%81%AB%E8%A7%A3%E3%81%91%E3%82%8B%E3%81%A8%E3%81%AF">&#x300C;explicitly &#x306B;&#x89E3;&#x3051;&#x308B;&#x300D;&#x3068;&#x306F;</h3>
+
+<p>&#x6A19;&#x6570; <span class="mathjax-exps">$0$</span> &#x306E;&#x4F53;&#x306F;&#x7D20;&#x4F53;&#x3068;&#x3057;&#x3066; <span class="mathjax-exps">$\mathbb{Q}$</span> &#x3092;&#x90E8;&#x5206;&#x4F53;&#x3068;&#x3057;&#x3066;&#x542B;&#x3080;&#x3002;&#x3053;&#x3053;&#x304B;&#x3089;&#x51FA;&#x767A;&#x3059;&#x308B;&#x3002;</p>
+<ul>
+<li><span class="mathjax-exps">$\sqrt{2}$</span> &#x3068;&#x3044;&#x3046;&#x6570;&#x306F;&#x3001; <span class="mathjax-exps">$x^2 - 2 \in \mathbb{Q}[x]$</span> &#x306E;&#x6B63;&#x306E;&#x6839;&#x3068;&#x3057;&#x3066; <em>&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x308B;</em> &#x3002;</li>
+<li>&#x305D;&#x3046;&#x3084;&#x3063;&#x3066; <span class="mathjax-exps">$\alpha &gt; 0$</span> &#x306B;&#x5BFE;&#x3057;&#x3066; <span class="mathjax-exps">$\sqrt{\alpha}$</span> &#x3068;&#x3044;&#x3046;&#x6570;&#x3092;&#x300C;&#x77E5;&#x3063;&#x3066;&#x3044;&#x308B;&#x300D;&#x3053;&#x3068;&#x306B;&#x3057;&#x305F;&#x7D50;&#x679C;&#x3001;&#x300C; <span class="mathjax-exps">$2$</span> &#x6B21;&#x65B9;&#x7A0B;&#x5F0F;&#x3082; <span class="mathjax-exps">$2$</span> &#x6B21;&#x4E0D;&#x7B49;&#x5F0F;&#x3082; explicitly &#x306B;&#x89E3;&#x3051;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x305F;&#x300D;&#x3053;&#x3068;&#x306B;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;
+<ul>
+<li><span class="mathjax-exps">$3, 4$</span> &#x6B21;&#x65B9;&#x7A0B;&#x5F0F;&#x3082;&#x3001; <span class="mathjax-exps">$\sqrt[k]{\alpha}$</span> &#x3092;&#x77E5;&#x3063;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x306B;&#x3057;&#x305F;&#x7D50;&#x679C;&#x3001;&#x89E3;&#x3051;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x305F;&#x3060;&#x3051;&#x3068;&#x3082;&#x8A00;&#x3048;&#x308B;&#x3002;</li>
+<li>&#x300C;&#x89E3;&#x3051;&#x306A;&#x3044;&#x300D; <span class="mathjax-exps">$5$</span> &#x6B21;&#x65B9;&#x7A0B;&#x5F0F; <span class="mathjax-exps">$x^5 + x - b = 0$</span> &#x3082; <span class="mathjax-exps">$x = \alpha_b$</span> &#x3068;&#x89E3;&#x3092;&#x7F6E;&#x3044;&#x305F;&#x3053;&#x3068;&#x306B;&#x3059;&#x308C;&#x3070;&#x3001;&#x89E3;&#x3051;&#x305F;&#x3053;&#x3068;&#x306B;&#x306A;&#x308B;&#x3002;</li>
+</ul>
+</li>
+<li>&#x3082;&#x3068;&#x3082;&#x3068;&#x306F; <strong>&#x6839;&#x306B;&#x8A18;&#x53F7;&#x3092;&#x7F6E;&#x3044;&#x3066;&#x3044;&#x308B;&#x3060;&#x3051;</strong> &#x3068;&#x8A00;&#x3048;&#x308B;&#x3002;
+<ul>
+<li>&#x305D;&#x306E;&#x95A2;&#x6570;&#x3068;&#x3057;&#x3066;&#x306E;&#x6027;&#x8CEA;&#x3092;&#x3001;&#x89E3;&#x6790;&#x7684;&#x306B;&#x7406;&#x89E3;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="%E6%A0%B9%E3%81%AB%E8%A8%98%E5%8F%B7%E3%82%92%E7%BD%AE%E3%81%8F">&#x6839;&#x306B;&#x8A18;&#x53F7;&#x3092;&#x7F6E;&#x304F;</h2>
+
+<ul>
+<li><span class="mathjax-exps">$(\text{PS})_c$</span> &#x6761;&#x4EF6;&#x304C;&#x6210;&#x7ACB;&#x3059;&#x308B;&#x4E0A;&#x754C; <span class="mathjax-exps">$c$</span> &#x3092;&#x6C42;&#x3081;&#x308B;&#x3002;</li>
+<li><span class="mathjax-exps">$\sup_{t &gt; 0} I(t v_\epsilon)$</span> &#x306E;&#x8A08;&#x7B97;&#x3092;&#x3057;&#x3001; <span class="mathjax-exps">$I$</span> &#x306E; mountain pass level &#x3092;&#x8A55;&#x4FA1;&#x3059;&#x308B;&#x3002;</li>
+</ul>
+<p>&#x5F8C;&#x8005;&#x3092;&#x3053;&#x3053;&#x3067;&#x306F;&#x53D6;&#x308A;&#x4E0A;&#x3052;&#x308B;&#x3002;</p>
+<h2 class="mume-header" id="%E8%A3%9C%E9%A1%8C">&#x88DC;&#x984C;</h2>
+
+<ul>
+<li>&#x300C;&#x3088;&#x304F;&#x308F;&#x304B;&#x3089;&#x306A;&#x3044;&#x3082;&#x306E; <span class="mathjax-exps">$T_\epsilon^2 A_\epsilon$</span>&#x300D;&#x304C;&#x300C;&#x3088;&#x304F;&#x308F;&#x304B;&#x3089;&#x306A;&#x3044;&#x3082;&#x306E; <span class="mathjax-exps">$\eta_0$</span>&#x300D;&#x306B;&#x53CE;&#x675F;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x793A;&#x305B;&#x3066;&#x3044;&#x308B;&#x3002;</li>
+<li>&#x305D;&#x308C;&#x3069;&#x3053;&#x308D;&#x304B;&#x3001;&#x300C;&#x3088;&#x304F;&#x308F;&#x304B;&#x3089;&#x306A;&#x3044; order <span class="mathjax-exps">$O(T_\epsilon^2 A_\epsilon - \eta_0)$</span>&#x300D;&#x304C;&#x300C;&#x3088;&#x304F; <em>&#x308F;&#x304B;&#x308B;</em> order <span class="mathjax-exps">$O(A_\epsilon - S)$</span>&#x300D;&#x306B;&#x4E00;&#x81F4;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;
+<ul>
+<li>&#x5341;&#x5206;&#x306A;&#x60C5;&#x5831;&#x304C;&#x5F15;&#x304D;&#x51FA;&#x305B;&#x3066;&#x3044;&#x308B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="%E8%A8%BC%E6%98%8E%E3%81%AE%E6%A6%82%E7%95%A5">&#x8A3C;&#x660E;&#x306E;&#x6982;&#x7565;</h2>
+
+<h3 class="mume-header" id="%E8%A3%9C%E8%B6%B3">&#x88DC;&#x8DB3;</h3>
+
+<p>&#x5B9F;&#x306F;&#x3001;&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x624B;&#x6CD5;&#x306F;&#x3001;&#x3088;&#x304F;&#x8ABF;&#x3079;&#x308B;&#x3068; [Zeng-Tang &apos;16] &#x3067;&#x5C0E;&#x5165;&#x3055;&#x308C;&#x3066;&#x3044;&#x305F;&#x3002;&#x3053;&#x3061;&#x3089;&#x306F; <span class="mathjax-exps">$\alpha = 0$</span>, <span class="mathjax-exps">$a &gt; 0$</span> &#x306B;&#x6B62;&#x307E;&#x3063;&#x3066;&#x3044;&#x308B;&#x3002;&#x3057;&#x304B;&#x3057;&#x79C1;&#x306F; [Naimen &apos;14 NoDEA] &#x306E;&#x76F4;&#x63A5;&#x62E1;&#x5F35;&#x306B;&#x6210;&#x529F;&#x3057;&#x305F;&#x306E;&#x3067;&#x3001; <span class="mathjax-exps">$a = 0$</span>, <span class="mathjax-exps">$b &gt; 0$</span> &#x306E;&#x5834;&#x5408;&#x304C;&#x542B;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x3002;&#x3053;&#x308C;&#x306F; Henon &#x578B; <span class="mathjax-exps">$\alpha &gt; 0$</span> &#x3068;&#x306E;&#x76F8;&#x6027;&#x3082;&#x826F;&#x3044;&#x3002;</p>
+<h2 class="mume-header" id="%E7%A0%94%E7%A9%B6%E3%81%AE%E6%84%8F%E7%BE%A9%E3%81%A8%E5%B0%86%E6%9D%A5%E3%81%AE%E7%9B%AE%E6%A8%99%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A6%8B%E8%A7%A3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">&#x300C;&#x7814;&#x7A76;&#x306E;&#x610F;&#x7FA9;&#x3068;&#x5C06;&#x6765;&#x306E;&#x76EE;&#x6A19;&#x306B;&#x95A2;&#x3059;&#x308B;&#x898B;&#x89E3;&#x306B;&#x3064;&#x3044;&#x3066;&#x300D;</h2>
+
+<h3 class="mume-header" id="%E7%A0%94%E7%A9%B6%E3%81%AE%E6%84%8F%E7%BE%A9">&#x7814;&#x7A76;&#x306E;&#x610F;&#x7FA9;</h3>
+
+<ul>
+<li>&#x79FB;&#x52D5;&#x3059;&#x308B; Talenti &#x95A2;&#x6570;&#x306E;&#x7A4D;&#x5206;&#x306E;&#x8A55;&#x4FA1;&#x3092;&#x6B63;&#x78BA;&#x306B;&#x884C;&#x3063;&#x305F;&#x3002; <span class="mathjax-exps">$N \geq 3$</span> &#x3067; <span class="mathjax-exps">$\epsilon$</span>-order &#x3092;&#x6C7A;&#x5B9A; or &#x6B8B;&#x4F59;&#x9805;&#x306E;&#x8A55;&#x4FA1;&#x306B;&#x6210;&#x529F;&#x3057;&#x305F;&#x3002;
+<ul>
+<li>&#x7D50;&#x679C;&#x3082;&#x3001;&#x5F37;&#x3044;&#x3002;&#x5B58;&#x5728;&#x6761;&#x4EF6;&#x3092;&#x307B;&#x3068;&#x3093;&#x3069;&#x640D;&#x308F;&#x306A;&#x3044;&#x3002;</li>
+</ul>
+</li>
+<li>&#x305D;&#x306E;&#x624B;&#x6CD5;&#x304C;&#x3001;&#x5358;&#x7D14;&#x306A;&#x65B9;&#x7A0B;&#x5F0F;&#x3060;&#x304B;&#x3089;&#x9069;&#x7528;&#x3067;&#x304D;&#x305F;&#x308F;&#x3051;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x4ED6;&#x306E;&#x65B9;&#x7A0B;&#x5F0F;&#x306B;&#x3082;&#x5E83;&#x304F;&#x5FDC;&#x7528;&#x53EF;&#x80FD;&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x3092;&#x793A;&#x5506;&#x3057;&#x305F;&#x3002;
+<ul>
+<li>&#x305D;&#x306E;&#x4F8B;&#x3068;&#x3057;&#x3066; Kirchhoff &#x578B;&#x306B;&#x9069;&#x7528;&#x3057;&#x305F;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E5%B0%86%E6%9D%A5%E3%81%AE%E7%9B%AE%E6%A8%99">&#x5C06;&#x6765;&#x306E;&#x76EE;&#x6A19;</h3>
+
+<ul>
+<li>Mountain pass theorem &#x3092;&#x7528;&#x3044;&#x3066;&#x4ED6;&#x306E;&#x65B9;&#x7A0B;&#x5F0F;&#x306B;&#x3082;&#x7D50;&#x679C;&#x304C;&#x51FA;&#x305D;&#x3046;&#x3002;
+<ul>
+<li>&#x4ECA;&#x3084;&#x3063;&#x3066;&#x3044;&#x308B;&#x3002;</li>
+</ul>
+</li>
+<li>&#x4ED6;&#x306E;&#x5909;&#x5206;&#x6CD5;&#x306E;&#x624B;&#x6CD5;&#x3068;&#x3082;&#x76F8;&#x6027;&#x304C;&#x826F;&#x3044;&#x3053;&#x3068;&#x304C;&#x793A;&#x5506;&#x3055;&#x308C;&#x308B;&#x3002;
+<ul>
+<li>Linking &#x3092;&#x9069;&#x7528;&#x3001; Nehari manifold &#x306E;&#x8A73;&#x3057;&#x3044;&#x89E3;&#x6790;&#x3001; Struwe &#x306E;&#x65B9;&#x6CD5;&#x306A;&#x3069;&#x3002;
+<ul>
+<li>&#x4F8B;&#x3048;&#x3070; Kirchhoff &#x578B;&#x306F;&#x8907;&#x6570;&#x306E;&#x65E2;&#x5B58;&#x306E;&#x7D50;&#x679C;&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;&#x305D;&#x308C;&#x3089;&#x3092;&#x300C; Henon &#x5316;&#x300D;&#x3059;&#x308B;&#x306E;&#x3082;&#x3046;&#x307E;&#x304F;&#x3044;&#x304F;&#x3060;&#x308D;&#x3046;&#x3002;</li>
+</ul>
+</li>
+<li>&#x4EBA;&#x306B;&#x3088;&#x3063;&#x3066;&#x5F97;&#x610F;&#x306A;&#x624B;&#x6CD5;&#x304C;&#x7570;&#x306A;&#x308B;&#x3002;&#x79C1; 1 &#x4EBA;&#x3067;&#x306F;&#x5168;&#x90E8;&#x306F;&#x3067;&#x304D;&#x306A;&#x3044;&#x3060;&#x308D;&#x3046;&#x3002;&#x624B;&#x6CD5;&#x304C;&#x5E83;&#x304C;&#x3063;&#x3066;&#x3044;&#x3063;&#x3066;&#x307B;&#x3057;&#x3044;&#x3002;</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

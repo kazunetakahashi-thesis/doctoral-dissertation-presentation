@@ -12,6 +12,7 @@
   - ただし私の顔写真が公開の場に出るのはやめてください。
   - 他の方の権利も侵害しないでください。
 - この文書は、審査会終了後インターネット上で公開する。
+  - `https://github.com/kazunetakahashi-thesis/doctoral-dissertation-presentation`
   - 全てのコンテンツは白黒。強調は **太字** と *斜体* のみを使う。
   - 参考文献の正式名称は掲げないが、少なくとも博士論文の Reference には引いてある。 Reference はこの資料と同時に公開する。
 - 博士論文をお読みくださった方に向けて発表を行う。
@@ -56,10 +57,12 @@ Talenti 関数 $U \colon \mathbb{R}^N \to \mathbb{R}$ を
 \]
 が成立する。すなわち Talenti 関数によって臨界 Sobolev 指数は達成される。
 
-$H_0^1(\Omega)$ 上の点列 $\{ u_j \}$ が $I$ の $(\text{PS})_c$ 列であるとは、以下の条件を充たすことをいう。
+汎関数 $I \colon H_0^1(\Omega) \to \mathbb{R}$ について、 $H_0^1(\Omega)$ 上の点列 $\{ u_j \}$ が $I$ の $(\text{PS})_c$ 列であるとは、以下の条件を充たすことをいう。
 
 1. $I(u_j) \to c$ as $j \to \infty$,
 2. $I^\prime(u_j) \to 0$ in $H^{-1}(\Omega)$ as $j \to \infty$.
+
+$I$ が $(\text{PS})_c$ 条件を充たすとは、 $I$ の任意の $(\text{PS})_c$ 列が precompact であることをいう。
 
 ## $O$ 記法について
 
@@ -76,7 +79,7 @@ $f(\epsilon) = O(g(\epsilon))$ as $\epsilon \to 0$ であるとは、 $C, C' > 0
 \[
   C g(\epsilon) \leq f(\epsilon) \leq C' g(\epsilon)
 \]
-が成立し、 $f, g$ は同じ極限(大抵 $0$ か $\infty$ )に達することをいう。
+が成立し、 $f, g$ は同じ極限(大抵 $0$ か$\infty$ )に達することをいう。
 
 このように規約していることが、特に後半に重要になる。
 
@@ -106,13 +109,13 @@ $f(\epsilon) = O(g(\epsilon))$ as $\epsilon \to 0$ であるとは、 $C, C' > 0
 
 $u^{p - 1}$ の項が出てくる半線形楕円型方程式を変分法で取り扱う。
 
-- $2 \leq p < 2^* $ の場合： $H_0^1(\Omega) \subset \subset L^p(\Omega)$ はコンパクトに埋め込まれている。
+- $2 \leq p < 2^* $ の場合： $H_ 0^1(\Omega) \subset \subset L^p(\Omega)$ はコンパクトに埋め込まれている。
   - 解析が比較的容易。
-- $p = 2^* $ の場合： $H_0^1(\Omega) \subset L^ {2^ *}(\Omega)$ はコンパクトに埋め込まれていない。
+- $p = 2^* $ の場合： $H_ 0^1(\Omega) \subset L^ {2^ *}(\Omega)$ はコンパクトに埋め込まれていない。
   - 変分法で解析はできるが、難しい。
   - 解析は汎関数の評価と $(\text{PS})_c$ 条件に持ち込まれる。
   - コンパクト性を破るのが Talenti 関数を絞る列。
-- $p > 2^*$ の場合： $H_0^1(\Omega) \not\subset L^p(\Omega)$ はそもそも埋め込まれていない。
+- $p > 2^*$ の場合： $H_ 0^1(\Omega) \not\subset L^p(\Omega)$ はそもそも埋め込まれていない。
   - 変分法では解析は困難。
 
 ### 臨界 Sobolev 指数の解析はどうなるか
@@ -128,8 +131,8 @@ $u^{p - 1}$ の項が出てくる半線形楕円型方程式を変分法で取�
 
 ここだけ覚える：
 
-- mountain pass level や $(\text{PS})_ c$ 条件は、ほぼ確実に **境界での正確な値での勝負になる** 。
-- **Talenti 関数の積分の残余項の $\epsilon$-order** が、解の存在に直結する。
+- mountain pass level や $(\text{PS})_ c$ 条件は、 **定数部分は「正確な値」が必要** になる。
+- Talenti 関数の積分に由来する **残余項の $\epsilon$-order が、解の存在に直結**する。
 
 ## Chapter 3: Henon 型方程式
 
@@ -200,7 +203,7 @@ $u^{p - 1}$ の項が出てくる半線形楕円型方程式を変分法で取�
 \end{align}
 \]
 
-$\alpha > 0$, $\lambda > \lambda_1'$ は定数である．ここで $\lambda_1'$ は，次の Dirichlet 固有値問題の第 $1$ 固有値とする：$-\Delta \phi = \lambda \phi \text{ in } \Omega$. A sign-changing solution の存在が、それぞれ以下の条件で示されている。
+$\alpha > 0$, $\lambda > \lambda_1'$ は定数である．ここで $\lambda_1'$ は，次の Dirichlet 固有値問題の第 $1$ 固有値とする：$-\Delta \phi = \lambda \phi \text{ in } \Omega$. ここで sign-changing solution の存在が、それぞれ以下の条件で示されている。
 
 - [Long-Yang '12]: $N \geq 7$ 、 $\partial \Omega$ が滑らか。
 - [Secchi '12]: $N \geq 5$ 、 $\Omega = B(0, 1)$ 。
@@ -278,8 +281,6 @@ $\sqrt{\epsilon}$ に「追いつかない」ようにしなくてはならな�
 >     \end{cases}
 > \]
 
-### $N \geq 5$ の場合
-
 (残余項) $< 0$ は以下と同値になる。
 
 \[
@@ -294,54 +295,9 @@ $\sqrt{\epsilon}$ に「追いつかない」ようにしなくてはならな�
 
 これを充たす $0 < \gamma < 1/2$ は、 $N \geq 5$ のとき存在する。よって 2 項目を負にする $\epsilon > 0$ が得られる。それを固定して $\alpha > 0$ を小さくすれば、 (3) は達成される。よって解が得られる。
 
-## $l(\epsilon) = \lvert \log \epsilon \rvert^{-k}$ について
+$N = 4$ の場合： $l(\epsilon) = \lvert \log \epsilon \rvert^{-k}$ ($k > 0$) とすると、[同様に解が得られる](log.html)。
 
-感覚的にいうと「 $\gamma$ が $0$ より小さいが、負ではない」場合に相当する。すなわち *この手法は「 $\gamma < 0$ 」の場合にも適用可能である* と考えてよろしい。
-
-> **Corollary 2.2.7**： $k > 0$ とし、 $l = l(\epsilon) = \lvert \log \epsilon \rvert^{-k}$ とする。このとき、 $\epsilon \to 0$ のとき次式が成立する。
-> \[
->   \int_\Omega \Psi_0 u_{\epsilon, l}^2 dx
->   = \begin{cases}
->     O(\lvert \log \epsilon \rvert^{-\beta k} \epsilon^{-(N-4)/2})                    & N \geq 5, \\
->     O(\lvert \log \epsilon \rvert^{1 -\beta k}) & N = 4,    \\
->     O(\lvert \log \epsilon \rvert^{-(\beta + 1)k})  & N = 3
->   \end{cases}
-> \]
-
-### 標語「$\log$ は定数」
-
-もともと計算機業界で言われている標語(？)。
-
-> **例** ：長さ $n$ の文字列の suffix array を構築する。
->
-> - 正直にやる方法：$O(n^2 \log n)$。
-> - Mamber-Myers 法：$O(n (\log n)^2)$。
-> - SA-IS 法：$O(n)$。
->
-> 普通の計算機でやると、例えば以下のようになる。
->
-> ||$O(n^2 \log n)$|$O(n (\log n)^2)$|$O(n)$|
-> |---|---|---|---|
-> |$n \approx 10^6$|数分| **一瞬** | **一瞬** |
-> |$n \approx 10^{10}$|論外|(多分数日)|約 20 分|
-
-### $N = 4$ の場合
-
-(残余項) $< 0$ は以下と同値になる。
-
-\[
-  \left( S - S (1 - 2l)^ {2\alpha/2^ *} \right) + \left( C \epsilon \lvert \log \epsilon \rvert^ {2k} - C' \epsilon \lvert \log \epsilon \rvert^{1 - \beta k} \right) < 0.
-\]
-
-2 項目が負になるような $\epsilon > 0$ が存在するための条件は、
-
-\[
-  k < \frac{1}{2 + \beta}.
-\]
-
-以下同じ。
-
-## Chapter 2: $u_{\epsilon, l}$ の評価手法についてのまとめ
+## Chapter 2: $u_{\epsilon, l}$ の評価手法の適用範囲と限界
 
 臨界 Sobolev 指数を持つ方程式を Henon 型に拡張する際に使える。
 
@@ -350,14 +306,12 @@ $\sqrt{\epsilon}$ に「追いつかない」ようにしなくてはならな�
 - 指数の比べ合いになるもの(例： $C\epsilon^\alpha - C'\epsilon^\beta < 0$ の型)は **ほぼそのまま存在定理が出てくる** と見込まれる。
   - たとえ $\lvert \log \epsilon \rvert$ の差しかなくても、勝てる。
     - Brezis-Nirenberg の $N = 4$ で今回勝った。
-  - 将来、 *これ以上強い結果を得る必要がない* 。
+  - 将来、 *これ以上強い結果を得る必要がない* と思われる。
 - 一方で、指数が一致していて係数の比べ合いになる場合(例： $(A - A') \epsilon^\alpha < 0$ の型)は、 **必ず負ける** 。
   - Brezis-Nirenberg の $N = 3$ がその例。今回は存在定理が出てこなかった。
     - しかし少し工夫した方程式になると、すぐにこの場合は存在定理が出なくなる傾向にある。だから *適用範囲に改めて大きな制約を与えた訳ではない* 。
 
-## $\Psi$ が境界で消える非自明な例
-
-$\beta_0 > 0$, $\Omega = B(0, 1)$, $\Psi(x) = (1 - \lvert x \rvert)^{\beta_0}$ が、 (T1) を充たす。この例では $\Psi$ が境界で消える。
+## (T1) について
 
 > - **(T1)**: $m > 0$, $\beta \geq 0$ 及び開球 $B \subset \Omega$ が存在し，$x_0 \in \partial \Omega$ 及び $\Psi \geq \Psi_0 \text{ in } \Omega$ が成立する．ここで， $\Psi_0$ は以下で定める．
 > \[
@@ -369,69 +323,171 @@ $\beta_0 > 0$, $\Omega = B(0, 1)$, $\Psi(x) = (1 - \lvert x \rvert)^{\beta_0}$ �
 >   \end{cases}
 > \]
 
+### $\Psi$ が境界で消える非自明な例
+
+$\beta_0 > 0$, $\Omega = B(0, 1)$, $\Psi(x) = (1 - \lvert x \rvert)^{\beta_0}$ が、 (T1) を充たす。この例では $\Psi$ が境界で消える。
+
 証明は、 2 次元平面に射影し、初等幾何を用いる。 $B$ の直径を $1$ 未満とし、 $\beta = 2 \beta_0$ とし、 $m > 0$ を小さくする。
 
 ## Chapter 4: Kirchhoff 型方程式
+
+\[
+  \begin{align}
+    \left\{
+    \begin{aligned}
+      - \left( a + b \left( \int_\Omega \lvert Du \rvert^2 dx \right)^{(p-2)/2} \right) \Delta u &= \Psi u^{q-1} + \lvert x \rvert^\alpha u^{2^* - 1}
+                &                                                     & \text{ in } \Omega,                        \\
+      u          & > 0                                                 &              & \text{ in } \Omega,         \\
+      u          & = 0                                                 &              & \text{ on } \partial\Omega.
+    \end{aligned}
+    \right.
+  \end{align} \tag{4}
+\]
+
+- $\alpha \geq 0$, $p > 2$, $q \geq 2$ は定数。
+- $a \geq 0$ と $b \geq 0$ は $a + b > 0$ を充たす定数。
 
 Kirchhoff-Henon 型方程式と呼ぶことにした。
 
 ### 主定理
 
+> **Theorem 1.1.2**: $2 < p < q < 2^*$ を仮定する。 $\Psi \in L^\infty(\Omega) \setminus \{ 0 \}$ は ある定数 $\kappa > 0$ が存在し $0 \leq \Psi \leq \kappa \text{ in } \Omega$ を充たすとする。次の (1), (2) のいずれかの成立を仮定する。<br>(1) $N = 3$ and $4 < q < 2^* = 6$,<br>(2) $N \geq 4$.
+>
+> 1. $\alpha = 0$ の場合： $\Psi \geq \kappa_0 \text{ in } \omega$ を充たす開集合 $\omega \subset \Omega$ と $\kappa_0 > 0$ が存在すると仮定する。このとき、方程式 (4) は解 $u \in H_0^1(\Omega)$ を持つ。
+> 2. $\alpha > 0$ の場合： 前述の (T1) を仮定する。このとき，十分小さな $\alpha > 0$ に対し，方程式 (4) は解 $u \in H_0^1(\Omega)$ を持つ．
+
+主な定理は 2. の $\alpha > 0$ の場合であり、以下これを議論する。前項の知見を用いて、これを導く。
+
 ## Kirchhoff 型方程式の先行研究
 
-もともと時間発展する方程式。電磁気学と関係する。全体を概観することは、私の手に余る。
+前提：先行研究は全て $\alpha = 0$ である。つまり Henon 型ではない。
+
+Kirchhoff 方程式は、もともと時間発展する方程式。電磁気学と関係する。 $p = 4$ とした
+
+\[
+  -\left( a + b \left( \int_\Omega \lvert Du \rvert^2 dx \right) \right) \Delta u = f(u)
+\]
+
+の型の方程式を *Kirchhoff 型の楕円型方程式* という。この場合、対応する汎関数は
+
+\[
+  I(u) = \frac{a}{2} \left\| Du \right\|_ {L^ 2(\Omega)}^ 2 + \frac{b}{4} \left\| Du \right\|_ {L^ 2(\Omega)}^ 4 - F(u)
+\]
+
+の型になるが、真ん中の項(に由来する元の方程式の項)を *non-local term* という。
 
 ### 変分法的研究の興り
 
+- [Ma-Rivera '03] が Kirchhoff 型の楕円型方程式に変分法を導入した。
+- [Alves-Corrêa-Ma '05] が truncated method を導入した。
 
+### 臨界 Sobolev 指数を持つ場合
 
-### Sobolev 臨界指数を持つ方程式
+ここは覚える： 臨界 Sobolev 指数を持つ Kirchhoff 型方程式は、 **次元によって手法が異なる** 。その根本的な理由は、 $p = 4$ と $2^* = 2N/(N - 2)$ の大小関係が、次元によって異なるからである。
 
-$N = 3$
+\[
+  p = 4
+  \begin{cases}
+    < 2^* = 6 & N = 3, \\
+    = 2^* = 4 & N = 4, \\
+    > 2^* & N \geq 5.
+  \end{cases}
+\]
 
-## 次元によって手法が異なる
-
-「次元が手法を決定する」
+- $N = 3$ の場合
+  - $4 < q < 2^* = 6$ の場合： [Naimen '14 NoDEA] で $\lambda > 0$ に対して解が存在することが示されている。
+    - 今回我々が参考にする手法。
+  - $2 < q < 4$ の場合： [Figueiredo '13], [Naimen '14 NoDEA] で、ある $\lambda^ * \geq 0$ が存在し、 $\lambda > \lambda^*$ に対して解が存在することが示されている。
+    - それぞれ異なる truncated method が使われている。
+  - $q = 2$ は[複雑な結果が出ている](q_2.html)。
+- $N = 4$ の場合
+  - [Naimen '14 JDE] が[最初である](n_4.html)。特に活発に研究がされている。
+- $N = 5$ の場合
+  - 最近いくつか存在定理が出ていると見られる。
 
 ## 問題点
 
-$N = 3$, $4 < q < 6$ の場合に、私が適用したい手法がある。しかし、
+$N = 3$, $4 < q < 6$ の場合に、私が適用したい手法がある。しかし、できれば $N \geq 3$ で結果を得たい。どうするか。
 
-## non-local term を拡張
+### non-local term を拡張
+
+そこで $4$ のところを $p$ として、動かすことにした。 $N = 3$, $4 < q < 6$ の場合は、 $N \geq 3$, $2 < p < q < 2^*$ の場合に対応する。つまり定理の仮定が出てくる。
 
 ## 次の問題点
 
-## 「explicitly に解ける」とは
+途中で、次の方程式の正の解が必要になる。
 
-標数 $0$ の体は素体として $\mathbb{Q}$ を部分体として含む。ここから出発する。
+\[
+  \left( a + b \eta^{(p-2)/2} \right) \eta - \left( \frac{\eta}{S} \right)^{2^*/2} = 0. \tag{5}
+\]
 
-- $\sqrt{2}$ という数は、 $x^2 - 2 \in \mathbb{Q}[x]$ の正の根として *定義される* 。
-- そうやって $\alpha > 0$ に対して $\sqrt{\alpha}$ という数を「知っている」ことにした結果、「 $2$ 次方程式も $2$ 次不等式も explicitly に解けるようになった」ことにしている。
-  - $3, 4$ 次方程式も、 $\sqrt[k]{\alpha}$ を知っていることにした結果、解けるようになっただけとも言える。
-  - 「解けない」 $5$ 次方程式 $x^5 + x - b = 0$ も $x = \alpha_b$ と解を置いたことにすれば、解けたことになる。
-- もともとは **根に記号を置いているだけ** と言える。
-  - その関数としての性質を、解析的に理解している。
+この方程式は [explicitly に解けない](explicitly.html)。解けないと「mountain pass level や $(\text{PS})_ c$ 条件は、 **定数部分は『正確な値』が必要** になる」の部分で非常に困る。
+
+解けない方程式の解に関連する道具の解析的性質を、導く必要がある。
 
 ## 根に記号を置く
+
+(5) の唯一の正値解を $\eta _0$ とおく。
 
 - $(\text{PS})_c$ 条件が成立する上界 $c$ を求める。
 - $\sup_{t > 0} I(t v_\epsilon)$ の計算をし、 $I$ の mountain pass level を評価する。
 
-後者をここでは取り上げる。
+どちらも成功した。後者をここでは取り上げる。
 
-## 補題
+## 鍵となる補題
 
-- 「よくわからないもの $T_\epsilon^2 A_\epsilon$」が「よくわからないもの $\eta_0$」に収束することが示せている。
-- それどころか、「よくわからない order $O(T_\epsilon^2 A_\epsilon - \eta_0)$」が「よく *わかる* order $O(A_\epsilon - S)$」に一致している。
+$v _{\epsilon} = v _{\epsilon, l}$ とする。
+\[
+  A_\epsilon = \int_\Omega \lvert Dv_\epsilon \rvert^2 dx
+\]
+と定める。また、 $T _\epsilon > 0$ を次式を充たす唯一の正値とする。
+\[
+  a A_\epsilon + b A_\epsilon^{p/2} T_\epsilon^{p - 2} - T_\epsilon^{2^* - 2} = 0. \tag{6}
+\]
+この $T _\epsilon$ は $\sup _{t > 0} I(t v _\epsilon)$ を評価する際に情報が必要となる値である。
+
+> **Lemma 4.2.2**: 次式が成立する。
+> \[
+>   \lim_{\epsilon \to 0} T_ \epsilon^2 A_ \epsilon = \eta_0. \tag{7}
+> \]
+> 特に、
+> \[
+>   T_ \epsilon^2 A_ \epsilon - \eta_ 0 = O\left( A_ \epsilon - S \right) \tag{8}
+> \]
+> as $\epsilon \to 0$ が成立する。
+
+- 「よくわからないもの $T_ \epsilon^2 A_ \epsilon$」が「よくわからないもの $\eta_0$」に収束する。
+- それどころか、「よくわからない order $O(T_ \epsilon^2 A_ \epsilon - \eta_ 0)$」が「よく *わかる* order $O(A_ \epsilon - S)$」に一致している。
   - 十分な情報が引き出せている。
 
-## 証明の概略
+### 証明の概略
 
+$t \geq 0$ に対し、
+\[
+  g(t) = at + b t^{p/2} - \frac{1}{S ^ {2 ^ * /2}} t ^ {2 ^ * /2}
+\]
+とする。まず $\lim_{\epsilon \to 0} g(T_ \epsilon ^2 A_ \epsilon) = 0$ が示される。
 
+この段落は黒板で説明する： $g(t) = 0$ が $t = 0, \eta _0$ が同値であることに気をつけて、 $T _\epsilon ^2 A _\epsilon$ の下界の評価を経ると (7) が得られる。
+
+(5), (6) より、
+\[
+\begin{multline}
+  a \left( T_\epsilon^2 A_\epsilon - \eta_0 \right)
+  +b \left( \left(T_\epsilon^2 A_\epsilon \right)^{p/2}
+  -\eta_0^{p/2} \right) \\
+  -\frac{1}{S^{2^*/2}}
+  \left( \left(T_\epsilon^2 A_\epsilon \right)^{2^*/2}
+  -\eta_0^{2^*/2} \right) \\
+  = \frac{1}{S^{2^*/2}} \left( S^{2^*/2} - A_\epsilon^{2^*/2} \right)
+  T_\epsilon^{2^*}.
+\end{multline}
+\]
+が得られるが、左辺は全ての項が $O(T _\epsilon^2 A _\epsilon)$ 、右辺は $O(A _\epsilon - S)$ である。さらに $g(T _\epsilon^2 A _\epsilon) < 0$ であることも鑑みると、 $T _\epsilon^2 A _\epsilon > 0$ もわかる。よって (8) が得られる。
 
 ### 補足
 
-実は、このような手法は、よく調べると [Zeng-Tang '16] で導入されていた。こちらは $\alpha = 0$, $a > 0$ に止まっている。しかし私は [Naimen '14 NoDEA] の直接拡張に成功したので、 $a = 0$, $b > 0$ の場合が含まれている。これは Henon 型 $\alpha > 0$ との相性も良い。
+実は、このような手法は、よく調べると [Zeng-Tang '16] で導入されていた。こちらは $\alpha = 0$, $a > 0$ に止まっている。しかし私は [Naimen '14 NoDEA] の[直接拡張に成功した](ps_c.html)ので、 $a = 0$, $b > 0$ の場合が含まれている。これは Henon 型 $\alpha > 0$ との相性も良い。
 
 ## 「研究の意義と将来の目標に関する見解について」
 
