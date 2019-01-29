@@ -1,9 +1,9 @@
 
 # 博士論文審査会
 
-タイトル：
+タイトル： **Hénon type elliptic equations with critical Sobolev growth** (臨界 Sobolev 指数を持つ Hénon 型楕円型方程式)
 
-高橋 和音 (Kazune Takahashi)
+氏名： 高橋 和音 (Kazune Takahashi)
 
 ## 前提
 
@@ -14,7 +14,7 @@
 - この文書は、審査会終了後インターネット上で公開する。
   - `https://github.com/kazunetakahashi-thesis/doctoral-dissertation-presentation`
   - 全てのコンテンツは白黒。強調は **太字** と *斜体* のみを使う。
-  - 参考文献の正式名称は掲げないが、少なくとも博士論文の Reference には引いてある。 Reference はこの資料と同時に公開する。
+  - 参考文献の正式名称は掲げないが、少なくとも博士論文の Bibliography には引いてある。 Bibliography はこの資料と同時に公開する。
 - 博士論文をお読みくださった方に向けて発表を行う。
   - 種々の事情で論文に *書けなかった内容* を主に述べ、補足説明、意図の説明をする。
 
@@ -24,10 +24,10 @@
 
 時間が限られている上に、 **博士論文をお読みくださった審査の先生方に向けて発表する** ので、以下の予備知識は仮定する。
 
-- [Brezis-Nirenberg '83] の結果を *自分で計算したことがある* 程度の知識を仮定する。
+- [Brézis-Nirenberg '83] の結果を *自分で計算したことがある* 程度の知識を仮定する。
   - Mountain pass theorem without $(\text{PS})$ condition
   - $(\text{PS})_c$ 条件
-  - Brezis-Nirenberg に出てくる Talenti 関数の積分の具体的な計算内容
+  - Brézis-Nirenberg に出てくる Talenti 関数の積分の具体的な計算内容
 
 審査の先生でない方へ： 私が **「ここは覚える」** と書いているところだけ覚えて進んでください。
 
@@ -85,7 +85,7 @@ $f(\epsilon) = O(g(\epsilon))$ as $\epsilon \to 0$ であるとは、 $C, C' > 0
 
 ## 領域
 
-領域 $\Omega \subset \mathbb{R}^N$ は共通である。 Henon 型を考察するために、以下の条件を置く。
+領域 $\Omega \subset \mathbb{R}^N$ は共通である。 Hénon 型を考察するために、以下の条件を置く。
 
 - 境界は区分的 $C^1$ 級。
 - 有界領域。特に単位球に部分集合として含まれる： $\Omega \subset B(0, 1)$.
@@ -96,7 +96,7 @@ $f(\epsilon) = O(g(\epsilon))$ as $\epsilon \to 0$ であるとは、 $C, C' > 0
 
 2 つの方程式を考察している。
 
-- Chapter 3 で臨界 Sobolev 指数を持つ Henon 方程式の解の存在を示した(Theorem 1.1.1)。
+- Chapter 3 で臨界 Sobolev 指数を持つ Hénon 方程式の解の存在を示した(Theorem 1.1.1)。
   - Chapter 2 で移動する Talenti 関数の積分の評価を正確に行った。 $N \geq 3$ で $\epsilon$-order を決定 or 残余項を評価した。
   - $\partial \Omega$ で項が消える非自明な例も含まれている(Corollary 1.1.3)。
 - Chapter 4 で Kirchhoff 型に、その手法を適用した(Theorem 1.1.2)。
@@ -120,7 +120,7 @@ $u^{p - 1}$ の項が出てくる半線形楕円型方程式を変分法で取�
 
 ### 臨界 Sobolev 指数の解析はどうなるか
 
-どの手法も、大体以下のような手順になる([Brezis-Nirenberg '83] 型の手法)。
+どの手法も、大体以下のような手順になる([Brézis-Nirenberg '83] 型の手法)。
 
 - 方程式の解は、汎関数 $I$ の非自明な臨界点。
 - $I$ の $(\text{PS}) _c$ 条件が成立するのは、例えば $0 < c < S^{N/2} / N$ になる。
@@ -134,7 +134,7 @@ $u^{p - 1}$ の項が出てくる半線形楕円型方程式を変分法で取�
 - mountain pass level や $(\text{PS})_ c$ 条件は、 **定数部分は「正確な値」が必要** になる。
 - Talenti 関数の積分に由来する **残余項の $\epsilon$-order が、解の存在に直結**する。
 
-## Chapter 3: Henon 型方程式
+## Chapter 3: Hénon 型方程式
 
 ### 主定理
 
@@ -167,9 +167,9 @@ $u^{p - 1}$ の項が出てくる半線形楕円型方程式を変分法で取�
 
 > **Theorem 1.1.1**: $N \geq 4$, $0 < \lambda < \lambda_1$ とする．$\Psi \in L^\infty(\Omega) \setminus \{ 0 \}$ は $0 \leq \Psi \leq 1 \text{ in } \Omega$ を充たすものとする． (T1) を仮定する．このとき，十分小さな $\alpha > 0$ に対し，方程式 (1) は解 $u \in H_0^1(\Omega)$ を持つ．
 
-## Henon 方程式の先行研究
+## Hénon 方程式の先行研究
 
-### Henon 方程式
+### Hénon 方程式
 
 \[
   \begin{align}
@@ -183,9 +183,9 @@ $u^{p - 1}$ の項が出てくる半線形楕円型方程式を変分法で取�
   \end{align}
 \]
 
-- [Henon '73] で $N = 1$ で、 $u$ に絶対値がついた方程式を数値解析しているのが興りである。
+- [Hénon '73] で $N = 1$ で、 $u$ に絶対値がついた方程式を数値解析しているのが興りである。
 - [Ni '82] で、 $2 \leq p < 2^*(\alpha) = 2(N + \alpha)/(N - 2)$ で球対称な正値解が存在することが示された。
-- 我々の (1) は Henon 方程式と Brezis-Nirenberg 問題を合わせたものである。
+- 我々の (1) は Hénon 方程式と Brézis-Nirenberg 問題を合わせたものである。
 
 ### 直接の先行研究
 
@@ -210,16 +210,16 @@ $\alpha > 0$, $\lambda > \lambda_1'$ は定数である．ここで $\lambda_1'$
 
 我々は、 $0 < \lambda < \lambda _1$ の時に、 $N \geq 4$ で正値解の存在を示す。 $\Psi$ は関数で、 $\Omega$ はより一般的である。
 
-## 臨界 Sobolev 指数を持つ Henon 型方程式はなぜ困難か
+## 臨界 Sobolev 指数を持つ Hénon 型方程式はなぜ困難か
 
 以下の、 **太字の部分は覚える** 。
 
-- 臨界 Sobolev 指数を持つ場合、 [Brezis-Nirenberg '83] の手法が有効であるが、 Talenti 関数を $u^{2^* - 1}$ の係数の関数の **最大値を取る部分を中心に絞る** 必要がある。
+- 臨界 Sobolev 指数を持つ場合、 [Brézis-Nirenberg '83] の手法が有効であるが、 Talenti 関数を $u^{2^* - 1}$ の係数の関数の **最大値を取る部分を中心に絞る** 必要がある。
   - 例えば私の修士論文は、それをやっている。
   - 係数が定数の場合、これは関係ないから、大抵 $0$ を中心に絞る。
-- ところが Henon 型の場合、 $\lvert x \rvert^\alpha$ は $\Omega$ 上 **最大値を取らない** 。$x_0$ に近づくと $\sup_{x \in \Omega} \lvert x \rvert^\alpha = 1$ に近づく。
+- ところが Hénon 型の場合、 $\lvert x \rvert^\alpha$ は $\Omega$ 上 **最大値を取らない** 。$x_0$ に近づくと $\sup_{x \in \Omega} \lvert x \rvert^\alpha = 1$ に近づく。
   - **新たな Talenti 関数の積分の評価が必要** になる。
-    - [Brezis-Nirenberg '83] と計算が違う。 *既存の論文の引用では済まされない* 。
+    - [Brézis-Nirenberg '83] と計算が違う。 *既存の論文の引用では済まされない* 。
   - その「影響」をどこまで抑え込めるかが焦点となる。
 
 ## Chapter 2: 移動する Talenti 関数 $u_{\epsilon, l}$
@@ -299,16 +299,16 @@ $N = 4$ の場合： $l(\epsilon) = \lvert \log \epsilon \rvert^{-k}$ ($k > 0$) 
 
 ## Chapter 2: $u_{\epsilon, l}$ の評価手法の適用範囲と限界
 
-臨界 Sobolev 指数を持つ方程式を Henon 型に拡張する際に使える。
+臨界 Sobolev 指数を持つ方程式を Hénon 型に拡張する際に使える。
 
 既存の臨界 Sobolev 指数を持つ方程式の結果のうち、
 
 - 指数の比べ合いになるもの(例： $C\epsilon^\alpha - C'\epsilon^\beta < 0$ の型)は **ほぼそのまま存在定理が出てくる** と見込まれる。
   - たとえ $\lvert \log \epsilon \rvert$ の差しかなくても、勝てる。
-    - Brezis-Nirenberg の $N = 4$ で今回勝った。
+    - Brézis-Nirenberg の $N = 4$ で今回勝った。
   - 将来、 *これ以上強い結果を得る必要がない* と思われる。
 - 一方で、指数が一致していて係数の比べ合いになる場合(例： $(A - A') \epsilon^\alpha < 0$ の型)は、 **必ず負ける** 。
-  - Brezis-Nirenberg の $N = 3$ がその例。今回は存在定理が出てこなかった。
+  - Brézis-Nirenberg の $N = 3$ がその例。今回は存在定理が出てこなかった。
     - しかし少し工夫した方程式になると、すぐにこの場合は存在定理が出なくなる傾向にある。だから *適用範囲に改めて大きな制約を与えた訳ではない* 。
 
 ## (T1) について
@@ -347,7 +347,7 @@ $\beta_0 > 0$, $\Omega = B(0, 1)$, $\Psi(x) = (1 - \lvert x \rvert)^{\beta_0}$ �
 - $\alpha \geq 0$, $p > 2$, $q \geq 2$ は定数。
 - $a \geq 0$ と $b \geq 0$ は $a + b > 0$ を充たす定数。
 
-Kirchhoff-Henon 型方程式と呼ぶことにした。
+Kirchhoff-Hénon 型方程式と呼ぶことにした。
 
 ### 主定理
 
@@ -360,7 +360,7 @@ Kirchhoff-Henon 型方程式と呼ぶことにした。
 
 ## Kirchhoff 型方程式の先行研究
 
-前提：先行研究は全て $\alpha = 0$ である。つまり Henon 型ではない。
+前提：先行研究は全て $\alpha = 0$ である。つまり Hénon 型ではない。
 
 Kirchhoff 方程式は、もともと時間発展する方程式。電磁気学と関係する。 $p = 4$ とした
 
@@ -476,10 +476,10 @@ $t \geq 0$ に対し、
   a \left( T_\epsilon^2 A_\epsilon - \eta_0 \right)
   +b \left( \left(T_\epsilon^2 A_\epsilon \right)^{p/2}
   -\eta_0^{p/2} \right) \\
-  -\frac{1}{S^{2^*/2}}
-  \left( \left(T_\epsilon^2 A_\epsilon \right)^{2^*/2}
-  -\eta_0^{2^*/2} \right) \\
-  = \frac{1}{S^{2^*/2}} \left( S^{2^*/2} - A_\epsilon^{2^*/2} \right)
+  -\frac{1}{S^{2^* /2}}
+  \left( \left(T_\epsilon^2 A_\epsilon \right)^{2^* /2}
+  -\eta_0^{2^* /2} \right) \\
+  = \frac{1}{S^{2^* /2}} \left( S^{2^* /2} - A_\epsilon^{2^* /2} \right)
   T_\epsilon^{2^*}.
 \end{multline}
 \]
@@ -487,7 +487,7 @@ $t \geq 0$ に対し、
 
 ### 補足
 
-実は、このような手法は、よく調べると [Zeng-Tang '16] で導入されていた。こちらは $\alpha = 0$, $a > 0$ に止まっている。しかし私は [Naimen '14 NoDEA] の[直接拡張に成功した](ps_c.html)ので、 $a = 0$, $b > 0$ の場合が含まれている。これは Henon 型 $\alpha > 0$ との相性も良い。
+実は、このような手法は、よく調べると [Zeng-Tang '16] で導入されていた。こちらは $\alpha = 0$, $a > 0$ に止まっている。しかし私は [Naimen '14 NoDEA] の[直接拡張に成功した](ps_c.html)ので、 $a = 0$, $b > 0$ の場合が含まれている。これは Hénon 型 $\alpha > 0$ との相性も良い。
 
 ## 「研究の意義と将来の目標に関する見解について」
 
@@ -504,5 +504,5 @@ $t \geq 0$ に対し、
   - 今やっている。
 - 他の変分法の手法とも相性が良いことが示唆される。
   - Linking を適用、 Nehari manifold の詳しい解析、 Struwe の方法など。
-    - 例えば Kirchhoff 型は複数の既存の結果があるので、それらを「 Henon 化」するのもうまくいくだろう。
+    - 例えば Kirchhoff 型は複数の既存の結果があるので、それらを「 Hénon 化」するのもうまくいくだろう。
   - 人によって得意な手法が異なる。私 1 人では全部はできないだろう。手法が広がっていってほしい。

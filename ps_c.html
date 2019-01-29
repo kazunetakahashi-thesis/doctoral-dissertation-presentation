@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>q_2</title>
+      <title>ps_c</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -216,32 +216,45 @@ code.language-yaml {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview   ">
-      <h1 class="mume-header" id="kirchhoff-n-3-%E7%B7%9A%E5%BD%A2%E9%A0%85%E3%81%8C%E3%81%A4%E3%81%8F%E5%A0%B4%E5%90%88">Kirchhoff <span class="mathjax-exps">$N = 3$</span> &#x7DDA;&#x5F62;&#x9805;&#x304C;&#x3064;&#x304F;&#x5834;&#x5408;</h1>
+      <h1 class="mume-header" id="concentration-compactness-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Concentration compactness &#x306B;&#x3064;&#x3044;&#x3066;</h1>
 
-<h2 class="mume-header" id="%E7%B5%90%E6%9E%9C">&#x7D50;&#x679C;</h2>
+<h2 class="mume-header" id="sobolev-%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF">Sobolev &#x57CB;&#x3081;&#x8FBC;&#x307F;</h2>
 
-<p><span class="mathjax-exps">$N = 3$</span>, <span class="mathjax-exps">$\alpha = 0$</span>, <span class="mathjax-exps">$a = 1$</span>, <span class="mathjax-exps">$q = 2$</span>, <span class="mathjax-exps">$\Omega = B(0, 1)$</span>, <span class="mathjax-exps">$\Psi \equiv \lambda$</span> &#x3068;&#x3059;&#x308B;&#x3002;</p>
-<p></p><div class="mathjax-exps">\[\begin{align}     \left\{     \begin{aligned}       - \left( 1 + b \left( \int_\Omega \lvert Du \rvert^2 dx \right) \right) \Delta u &amp;= \lambda u + u^{2^* - 1}                 &amp;                                                     &amp; \text{ in } \Omega,                        \\       u          &amp; &gt; 0                                                 &amp;              &amp; \text{ in } \Omega,         \\       u          &amp; = 0                                                 &amp;              &amp; \text{ on } \partial\Omega.     \end{aligned}     \right.   \end{align} \tag{1}\]</div><p></p>
 <blockquote>
-<p><strong>&#x5B9A;&#x7406;<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></strong>: <span class="mathjax-exps">$b &gt; 0$</span> &#x306F;&#x5341;&#x5206;&#x5C0F;&#x3055;&#x3044;&#x3082;&#x306E;&#x3068;&#x3059;&#x308B;&#x3002;&#x3053;&#x306E;&#x3068;&#x304D;&#x3001; <span class="mathjax-exps">$b$</span> &#x306E;&#x95A2;&#x6570; <span class="mathjax-exps">$c _i(b)$</span> (<span class="mathjax-exps">$i = 1, 2$</span>) &#x304C;&#x5B58;&#x5728;&#x3057;&#x3001; <span class="mathjax-exps">$\lim _{b \to 0} c _i (a) = 0$</span> &#x304C;&#x6210;&#x7ACB;&#x3057;&#x3001;&#x3055;&#x3089;&#x306B;&#x4EE5;&#x4E0B;&#x304C;&#x6210;&#x7ACB;&#x3059;&#x308B;&#x3002;</p>
-<ol>
-<li><span class="mathjax-exps">$\lambda _1&apos;/4 + c _1(b) &lt; \lambda \leq \lambda _1&apos;$</span> &#x306E;&#x3068;&#x304D;&#x3001; (1) &#x306F;&#x89E3;&#x3092;&#x6301;&#x3064;&#x3002;</li>
-<li><span class="mathjax-exps">$\lambda _1&apos; &lt; \lambda \leq \lambda _1&apos; + c _2(b)$</span> &#x306E;&#x3068;&#x304D;&#x3001; (1) &#x306F;&#x89E3;&#x3092;&#x5C11;&#x306A;&#x304F;&#x3068;&#x3082; <span class="mathjax-exps">$2$</span> &#x3064;&#x6301;&#x3064;&#x3002;</li>
-</ol>
+<ul>
+<li><span class="mathjax-exps">$p = 2^*$</span> &#x306E;&#x5834;&#x5408;&#xFF1A; <span class="mathjax-exps">$H_ 0^1(\Omega) \subset L^ {2^ *}(\Omega)$</span> &#x306F;&#x30B3;&#x30F3;&#x30D1;&#x30AF;&#x30C8;&#x306B;&#x57CB;&#x3081;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x3002;
+<ul>
+<li>&#x5909;&#x5206;&#x6CD5;&#x3067;&#x89E3;&#x6790;&#x306F;&#x3067;&#x304D;&#x308B;&#x304C;&#x3001;&#x96E3;&#x3057;&#x3044;&#x3002;</li>
+<li>&#x89E3;&#x6790;&#x306F;&#x6C4E;&#x95A2;&#x6570;&#x306E;&#x8A55;&#x4FA1;&#x3068; <span class="mathjax-exps">$(\text{PS})_c$</span> &#x6761;&#x4EF6;&#x306B;&#x6301;&#x3061;&#x8FBC;&#x307E;&#x308C;&#x308B;&#x3002;</li>
+<li>&#x30B3;&#x30F3;&#x30D1;&#x30AF;&#x30C8;&#x6027;&#x3092;&#x7834;&#x308B;&#x306E;&#x304C; Talenti &#x95A2;&#x6570;&#x3092;&#x7D5E;&#x308B;&#x5217;&#x3002;</li>
+</ul>
+</li>
+</ul>
 </blockquote>
-<h2 class="mume-header" id="%E3%81%9D%E3%81%AE%E5%A4%A7%E3%81%BE%E3%81%8B%E3%81%AA%E7%90%86%E7%94%B1">&#x305D;&#x306E;&#x5927;&#x307E;&#x304B;&#x306A;&#x7406;&#x7531;</h2>
+<p>&#x3069;&#x306E;&#x304F;&#x3089;&#x3044;&#x30B3;&#x30F3;&#x30D1;&#x30AF;&#x30C8;&#x306B;&#x57CB;&#x3081;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x304B;&#xFF1F; &#x6709;&#x754C;&#x5217; <span class="mathjax-exps">$\{ u _j \}$</span> in <span class="mathjax-exps">$H _0^1(\Omega)$</span> &#x3092;&#x6301;&#x3063;&#x3066;&#x304D;&#x305F;&#x3068;&#x304D;&#x306B;&#x3001;&#x4F55;&#x304C;&#x8A00;&#x3048;&#x308B;&#x304B;&#xFF1F;</p>
+<p>&#x8AA4;&#x89E3;&#x3092;&#x6050;&#x308C;&#x305A;&#x306B;&#x8A00;&#x3048;&#x3070;&#x3001; <strong>&#x307B;&#x3068;&#x3093;&#x3069;&#x304C; precompact</strong> in <span class="mathjax-exps">$L^ {2^ *}(\Omega)$</span> &#x3067;&#x3042;&#x308B;&#x3002;&#x305F;&#x3060;&#x305D;&#x306E;&#x3046;&#x3061;&#x4F8B;&#x5916;&#x304C;&#x3042;&#x3063;&#x3066;&#x3001;&#x305D;&#x308C;&#x306F; <strong>&#x4E8B;&#x5B9F;&#x4E0A;&#x3001; Talenti &#x95A2;&#x6570;&#x3092;&#x7D5E;&#x308B;&#x5217;</strong> &#x3057;&#x304B;&#x306A;&#x3044;&#x3002;</p>
+<p></p><div class="mathjax-exps">\[u_ \epsilon = \frac{\xi(x)}{\left( \epsilon + \lvert x \rvert^2 \right)^{(N - 2)/2}}\]</div><p></p>
+<p>&#x300C;&#x4E8B;&#x5B9F;&#x4E0A;&#x300D;&#x3068;&#x66F8;&#x3044;&#x305F;&#x306E;&#x306F;&#x3001;&#x4E2D;&#x5FC3;&#x306F; <span class="mathjax-exps">$\overline{\Omega}$</span> &#x4E0A;&#x306E;&#x3069;&#x3053;&#x3067;&#x3082;&#x3044;&#x3044;&#x3057;&#x3001;&#x53EF;&#x7B97;&#x7121;&#x9650;&#x500B;&#x307E;&#x3067;&#x306F;&#x7D5E;&#x308B;&#x4E2D;&#x5FC3;&#x304C;&#x3042;&#x3063;&#x3066;&#x3082;&#x3044;&#x3044;&#x304B;&#x3089;&#x3067;&#x3042;&#x308B;&#x3002;</p>
+<p>&#x3053;&#x306E;&#x90E8;&#x5206;&#x3092;&#x5B9A;&#x5F0F;&#x5316;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x306F;&#x3001;&#x5927;&#x304D;&#x304F;&#x5206;&#x3051;&#x3066;&#x3001; Lions &#x306E;&#x88DC;&#x984C;&#x3068; Struwe &#x306E;&#x65B9;&#x6CD5;&#x304C;&#x3042;&#x308B;&#x3002;</p>
+<h2 class="mume-header" id="the-second-concentration-compactness-lemma-by-lions">The second concentration compactness lemma by Lions</h2>
 
-<p><span class="mathjax-exps">$\phi _1$</span> &#x3092; <span class="mathjax-exps">$\lambda _1&apos;$</span> &#x306B;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x56FA;&#x6709;&#x95A2;&#x6570;&#x3068;&#x3057;&#x3001; <span class="mathjax-exps">$f(t) = I(t \phi _1)$</span> &#x3068;&#x3059;&#x308B;&#x3002;&#x3059;&#x308B;&#x3068; <span class="mathjax-exps">$b &gt; 0$</span> &#x304C;&#x5341;&#x5206;&#x5C0F;&#x3055;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;&#x6975;&#x5C0F;&#x70B9;&#x3082;&#x6975;&#x5927;&#x70B9;&#x3082;&#x51FA;&#x3066;&#x304F;&#x308B;&#x3002;&#x3053;&#x308C;&#x304C;&#x89E3;&#x3092; <span class="mathjax-exps">$2$</span> &#x3064;&#x69CB;&#x6210;&#x3059;&#x308B;&#x9375;&#x3068;&#x306A;&#x308B;&#x3002;</p>
-<p>&#x4EE5;&#x4E0A;&#x306E;&#x8A18;&#x8FF0;&#x306F;<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>&#x3092;&#x53C2;&#x8003;&#x306B;&#x3057;&#x305F;&#x3002;</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>D. Naimen, On the Br&#xE9;zis&#x2010;Nirenberg problem with a Kirchhoff type perturbation, Adv. Nonlinear Stud. 15 (2015) 135&#x2010;156. <a href="#fnref1" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>D. Naimen, Positive solutions of Kirchhoff type elliptic equations involving the critical Sobolev exponent, &#x6570;&#x7406;&#x89E3;&#x6790;&#x7814;&#x7A76;&#x6240;&#x8B1B;&#x7A76;&#x9332;, 2046 (2017) 23-38. <a href="#fnref2" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
-</li>
-</ol>
-</section>
+<p>[Lions &apos;85] &#x306B;&#x3088;&#x308B;&#x3002;&#x5B9A;&#x5F0F;&#x5316;&#x3059;&#x308B;&#x3068;&#x9577;&#x304F;&#x3066;&#x5374;&#x3063;&#x3066;&#x308F;&#x304B;&#x308A;&#x3065;&#x3089;&#x3044;&#x306E;&#x3067;&#x3001;&#x30A8;&#x30C3;&#x30BB;&#x30F3;&#x30B9;&#x3060;&#x3051;&#x8A18;&#x3059;&#x3002;</p>
+<p>The second concentration compactness lemma &#x306F; <em>&#x95A2;&#x6570;&#x7A7A;&#x9593;&#x306B;&#x5BFE;&#x3059;&#x308B;&#x5B9A;&#x7406;</em> &#x3067;&#x3042;&#x308B;&#x3002;&#x305D;&#x306E;&#x7D50;&#x8AD6;&#x306F;&#x3001;&#x4E0A;&#x306E; <span class="mathjax-exps">$\{ u_ j \}$</span> &#x306F; <span class="mathjax-exps">$L^ {2^ *}(\Omega)$</span> &#x4E0A; precompact &#x3067;&#x3042;&#x308B;&#x304B;&#x3001;&#x3082;&#x3057;&#x305D;&#x3046;&#x3067;&#x306A;&#x3051;&#x308C;&#x3070;&#x3001;<span class="mathjax-exps">$u \in H_0^1(\Omega)$</span> <span class="mathjax-exps">$\mathcal{J} \neq \emptyset$</span> &#x304C;&#x5B58;&#x5728;&#x3057;&#x3001;<br>
+</p><div class="mathjax-exps">\[\begin{align}   \left\{   \begin{aligned}     \lvert Du_j \rvert^2 \rightharpoonup &amp; d\eta     \geq \lvert Du \rvert^2 + \sum_{k \in \mathcal{J}}     \eta_k \delta_{x_k},     \\     (u_j)_+^{2^*} \rightharpoonup &amp; d\nu     = (u_+)^{2^*} + \sum_{k \in \mathcal{J}}     \nu_k \delta_{x_k}   \end{aligned}   \right. \tag{1} \end{align}\]</div><br>
+&#x3068;&#x66F8;&#x3051;&#x308B;&#x6E2C;&#x5EA6;&#x306B;&#x5F31;&#x6E2C;&#x5EA6;&#x53CE;&#x675F;&#x3059;&#x308B;&#x3002; <span class="mathjax-exps">$\eta _k$</span> &#x3068; <span class="mathjax-exps">$\nu _k$</span> &#x306E;&#x9593;&#x306B;&#x306F; <span class="mathjax-exps">$\eta _k \geq S \nu _k^{2/2^*}$</span> &#x3068;&#x3044;&#x3046;&#x95A2;&#x4FC2;&#x5F0F;&#x304C;&#x3042;&#x308B;&#x3002;<p></p>
+<h2 class="mume-header" id="%E6%8B%A1%E5%BC%B5%E3%81%AE%E6%96%B9%E6%B3%95">&#x62E1;&#x5F35;&#x306E;&#x65B9;&#x6CD5;</h2>
+
+<p>&#x672C;&#x8AD6;&#x6587;&#x306E; Chapter 4 &#x3067;&#x306F; [Naimen &apos;14 NoDEA] &#x306E;&#x76F4;&#x63A5;&#x306E;&#x62E1;&#x5F35;&#x306B;&#x6210;&#x529F;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;&#x305D;&#x306E;&#x6982;&#x7565;&#x3092;&#x8FF0;&#x3079;&#x308B;&#x3002;</p>
+<p><span class="mathjax-exps">$(\text{PS})_ c$</span> &#x6761;&#x4EF6;&#x306E;&#x4E0A;&#x754C;&#x3092;&#x6C42;&#x3081;&#x308B;&#x969B;&#x306B; the second concentration compactness lemma &#x3092;&#x7528;&#x3044;&#x3066;&#x3044;&#x308B;&#x3002;&#x80CC;&#x7406;&#x6CD5;&#x3092;&#x4F7F;&#x3046;&#x3002;&#x300C;<span class="mathjax-exps">$\{ u_ j \}$</span> &#x306F;&#x3001;&#x793A;&#x3057;&#x305F;&#x3044;&#x4E0A;&#x754C;&#x672A;&#x6E80;&#x306E; <span class="mathjax-exps">$(\text{PS})_ c$</span> &#x5217;&#x3067;&#x3042;&#x308B;&#x306E;&#x306B; precompact &#x3067;&#x306A;&#x3044;&#x300D;&#x3068;&#x4EEE;&#x5B9A;&#x3057; (1) &#x3092;&#x7528;&#x3044;&#x308B;&#x3002;&#x3059;&#x308B;&#x3068;&#x3001; [Naimen &apos;14 NoDEA] &#x306F;<br>
+</p><div class="mathjax-exps">\[0 \geq (a + b \eta_ k) \eta_ k - \nu_ k \tag{2}\]</div><br>
+&#x304C;&#x51FA;&#x3066;&#x304F;&#x308B;&#x3002; <span class="mathjax-exps">$\eta _k \geq S \nu _k^{2/2^*}$</span> &#x3092;&#x7528;&#x3044;&#x3066;&#x3001; (2) &#x304B;&#x3089;&#x305D;&#x308C;&#x305E;&#x308C;&#x3001;<br>
+<div class="mathjax-exps">\[\begin{align}     0 &amp;\geq \left(a + b \eta_ k \right) \eta_ k - \left( \frac{\eta _k}{S} \right)^3, \\     0 &amp;\geq \left( a + b S \nu_ k ^{1/3} \right) S \nu_ k ^{1/3} - \nu _k   \end{align}\]</div><br>
+&#x3068;&#x3057;&#x3066;&#x3044;&#x308B;&#x3002;&#x3053;&#x308C;&#x3089;&#x3092; <strong>&#x305D;&#x308C;&#x305E;&#x308C;</strong> &#x76F4;&#x63A5;&#x89E3;&#x3044;&#x3066;&#x3044;&#x308B;&#x3002;&#x305D;&#x306E;&#x5F8C; <span class="mathjax-exps">$c$</span> &#x3092;&#x8A55;&#x4FA1;&#x3057;&#x3066;&#x3001;&#x77DB;&#x76FE;&#x3092;&#x5C0E;&#x304F;&#x3002;<p></p>
+<p>&#x6211;&#x3005;&#x306E;&#x5834;&#x5408;&#x3001; (2) &#x306B;&#x76F8;&#x5F53;&#x3059;&#x308B;&#x3082;&#x306E;&#x306F;<br>
+</p><div class="mathjax-exps">\[0 \geq \left( a + b \eta_k^{(p - 2)/2} \right) \eta_k - \lvert x_k \rvert^\alpha \nu_k \tag{3}\]</div><br>
+&#x3067;&#x3042;&#x308B;&#x3002;&#x307E;&#x305A;&#x3053;&#x3053;&#x306B; H&#xE9;non &#x578B;&#x3068;&#x306E;&#x76F8;&#x6027;&#x306E;&#x826F;&#x3055;&#x304C;&#x51FA;&#x3066;&#x3044;&#x308B;&#x3002;<p></p>
+<p>&#x76F4;&#x63A5;&#x89E3;&#x304F;&#x3053;&#x3068;&#x306F;&#x3067;&#x304D;&#x306A;&#x3044;&#x3002;&#x305D;&#x3053;&#x3067;&#x307E;&#x305A; <span class="mathjax-exps">$\lvert x_ k \rvert \leq 1$</span> &#x3068; <span class="mathjax-exps">$\eta_ k \geq S \nu_ k^{2/2^*}$</span> &#x3092;&#x7528;&#x3044;&#x3066; <span class="mathjax-exps">$\eta_ k \geq \eta_ 0$</span> &#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x3092;&#x5C0E;&#x304F;&#x3002;&#x305D;&#x306E;&#x5F8C; <span class="mathjax-exps">$c$</span> &#x3092;&#x8A55;&#x4FA1;&#x3059;&#x308B;&#x969B;&#x306B;&#x3001; (3) &#x3092;&#x7528;&#x3044;&#x3066; <strong><span class="mathjax-exps">$\lvert x_k \rvert^\alpha \nu_k$</span> &#x306E;&#x9805;&#x3092;&#x6D88;&#x53BB;</strong> &#x3059;&#x308B;&#x3002;&#x77DB;&#x76FE;&#x3092;&#x5C0E;&#x304F;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x306B;&#x3088;&#x308A;&#x3001; <span class="mathjax-exps">$a \geq 0$</span>, <span class="mathjax-exps">$b \geq 0$</span>, <span class="mathjax-exps">$a + b &gt; 0$</span> &#x3068;&#x3044;&#x3046;&#x6761;&#x4EF6;&#x3092;&#x640D;&#x306A;&#x308F;&#x305A;&#x306B;&#x3001;&#x8B70;&#x8AD6;&#x3092;&#x62E1;&#x5F35;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x305F;&#x3002;</p>
 
       </div>
       

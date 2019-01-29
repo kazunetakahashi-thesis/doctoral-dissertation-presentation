@@ -59,9 +59,9 @@ $(\text{PS})_ c$ 条件の上界を求める際に the second concentration comp
 
 我々の場合、 (2) に相当するものは
 \[
-  0 \leq \left( a + b \eta_k^{(p - 2)/2} \right) \eta_k - \lvert x_k \rvert^\alpha \nu_k \tag{3}
+  0 \geq \left( a + b \eta_k^{(p - 2)/2} \right) \eta_k - \lvert x_k \rvert^\alpha \nu_k \tag{3}
 \]
-である。まずここに Henon 型との相性の良さが出ている。
+である。まずここに Hénon 型との相性の良さが出ている。
 
 直接解くことはできない。そこでまず $\lvert x_ k \rvert \leq 1$ と $\eta_ k \geq S \nu_ k^{2/2^*}$ を用いて $\eta_ k \geq \eta_ 0$ であることを導く。その後 $c$ を評価する際に、 (3) を用いて **$\lvert x_k \rvert^\alpha \nu_k$ の項を消去** する。矛盾を導く。
 
