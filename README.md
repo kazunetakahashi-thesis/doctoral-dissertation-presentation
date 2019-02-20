@@ -9,3 +9,5 @@
 html 化する際に数式と日本語の間に不自然な改行が度々入りましたが，私の方ではどうしようもなかったのでそのままにしました．
 
 `bibliography.pdf` は本論文から参考文献を切り出したものです．
+
+- [博士論文の要旨](https://github.com/kazunetakahashi-thesis/doctoral-dissertation-abstract)
